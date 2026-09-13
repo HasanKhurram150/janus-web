@@ -11,7 +11,7 @@ const USE_CASES = [
     title: "Robotics and automated fleets",
     subheading: "Low-latency path coordination in dense facilities",
     description:
-      "When mobile units operate in the same warehouse, centralized routing introduces communication lag and navigation stalls. Janus coordinates spatial occupancy locally, calculating collision-free trajectories in under a millisecond.",
+      "When mobile units operate in the same warehouse, centralized routing introduces communication lag and navigation stalls. JANUS coordinates spatial occupancy locally, calculating collision-free trajectories in under a millisecond.",
     metrics: [
       { label: "Fleet capacity", value: "1,200 units" },
       { label: "Clearance margin", value: "2.0 mm" },
@@ -35,7 +35,7 @@ await mesh.broadcastPosition({
     title: "Physical simulation environments",
     subheading: "Consistent physics for hardware validation",
     description:
-      "Validate vehicle dynamics, sensor feeds, and environmental conditions before physical deployment. Janus runs physics steps with deterministic precision across repeated iterations.",
+      "Validate vehicle dynamics, sensor feeds, and environmental conditions before physical deployment. JANUS runs physics steps with deterministic precision across repeated iterations.",
     metrics: [
       { label: "Step frequency", value: "2,400 Hz" },
       { label: "Repeatability", value: "100%" },
@@ -59,7 +59,7 @@ const frame = await sim.step({
     title: "Spatial display interfaces",
     subheading: "Low-latency streaming for connected displays",
     description:
-      "Minimize motion-to-photon latency in augmented reality and spatial visualization systems. Janus streams coordinate state directly to display pipelines with sub-millisecond updates.",
+      "Minimize motion-to-photon latency in augmented reality and spatial visualization systems. JANUS streams coordinate state directly to display pipelines with sub-millisecond updates.",
     metrics: [
       { label: "Frame latency", value: "1.4 ms" },
       { label: "Display target", value: "120 fps" },
@@ -82,7 +82,7 @@ pipeline.onFrame((state) => {
     title: "Isolated critical infrastructure",
     subheading: "Local operation without external dependencies",
     description:
-      "Operate critical monitoring systems completely disconnected from public cloud providers. Janus runs entirely on local hardware with verified data integrity.",
+      "Operate critical monitoring systems completely disconnected from public cloud providers. JANUS runs entirely on local hardware with verified data integrity.",
     metrics: [
       { label: "Cloud reliance", value: "Zero" },
       { label: "Network model", value: "Local peer" },

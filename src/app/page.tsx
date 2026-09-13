@@ -2,15 +2,18 @@ import SmoothScroll from "@/components/SmoothScroll";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
+import POCBannerSection from "@/components/POCBannerSection";
 import CapabilitiesSection from "@/components/CapabilitiesSection";
+import ServicesSection from "@/components/ServicesSection";
 import UsecasesSection from "@/components/UsecasesSection";
+import FAQSection from "@/components/FAQSection";
 import TiersSection from "@/components/TiersSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <SmoothScroll>
-      <div className="relative w-full min-h-screen bg-[#1b1022] text-white flex flex-col items-center overflow-x-hidden">
+      <div className="relative w-full min-h-screen text-white flex flex-col items-center overflow-x-clip">
         {/* Full-width sticky navigation */}
         <Navbar />
 
@@ -22,14 +25,21 @@ export default function Home() {
           {/* 2. About Section */}
           <AboutSection />
 
-          {/* 3. Capabilities Section */}
+          {/* POC Banner Section */}
+          <POCBannerSection />
+
+          {/* 3. Features Section */}
           <CapabilitiesSection />
+          
+          {/* 4. Capabilities Section */}
+          <ServicesSection />
 
-          {/* 4. Usecases Section */}
-          <UsecasesSection />
+          {/* FAQ & Newsletter Section replacing Usecases */}
+          {/* <UsecasesSection /> */}
+          <FAQSection />
 
-          {/* 5. Tiers Section */}
-          <TiersSection />
+          {/* 5. Tiers Section (Pricing) */}
+          {/* <TiersSection /> */}
         </main>
 
         {/* Full-width Footer */}

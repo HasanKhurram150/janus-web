@@ -8,60 +8,66 @@ import ScrambleText from "./ScrambleText";
 
 const BENTO_ITEMS = [
   {
-    id: "graphizo",
-    title: "Graphizo.",
-    meta: "2026 · 3 WEEK BUILD · LIVE",
-    tags: ["ARCHITECTURE", "BUILD", "DATA"],
-    imageSrc: "/images/graphizo.jpg",
+    id: "siem",
+    title: "1. SEIM",
+    tags: ["SECURITY", "SIEM", "INTELLIGENCE"],
+    imageSrc: "/images/SEIM_dashboard.svg",
+    imageFit: "contain" as const,
     centerEmblem: (
       <div className="flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-black/30 backdrop-blur-md border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
         <div className="flex items-center gap-1">
-          <span className="w-1.5 h-6 rounded-full bg-white" />
-          <span className="w-1.5 h-7 rounded-full bg-white" />
-          <span className="w-1.5 h-5 rounded-full bg-white" />
+          <span className="w-1.5 h-6 rounded-full bg-blue-500" />
+          <span className="w-1.5 h-7 rounded-full bg-blue-400" />
+          <span className="w-1.5 h-5 rounded-full bg-blue-600" />
         </div>
         <span className="text-xl sm:text-2xl font-normal text-white tracking-tight">
-          Graphizo
+          SIEM Operations
         </span>
       </div>
     ),
   },
   {
-    id: "radario",
-    title: "Radario.",
-    meta: "2026 · 6 WEEK BUILD · LIVE",
-    tags: ["STRATEGY", "BUILD"],
-    imageSrc: "/images/radario.jpg",
-    centerEmblem: (
-      <div className="text-white text-6xl sm:text-7xl font-normal tracking-tighter select-none drop-shadow-[0_0_35px_rgba(255,255,255,0.45)]">
-        FR
-      </div>
-    ),
-  },
-  {
-    id: "spectra",
-    title: "Spectra.",
-    meta: "2026 · 4 WEEK BUILD · LIVE",
-    tags: ["COMPUTE", "KERNEL", "DATA"],
-    imageSrc: "/images/spectra.jpg",
+    id: "network-observability",
+    title: "2. SOAR",
+    tags: ["NETWORK", "TOPOLOGY", "OBSERVABILITY"],
+    imageSrc: "/images/network_topology.svg",
+    imageFit: "contain" as const,
     centerEmblem: (
       <div className="flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-black/30 backdrop-blur-md border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
-        <span className="w-2.5 h-2.5 rounded-full bg-white" />
+        <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.8)]" />
         <span className="text-xl sm:text-2xl font-normal text-white tracking-tight">
-          Spectra
+          Network Graph
         </span>
       </div>
     ),
   },
   {
-    id: "aether",
-    title: "Aether.",
-    meta: "2026 · 2 WEEK BUILD · LIVE",
-    tags: ["PHYSICS", "SIMULATION"],
-    imageSrc: "/images/aether.jpg",
+    id: "soar",
+    title: "3. NOC",
+    tags: ["AUTOMATION", "SOAR", "MITIGATION"],
+    imageSrc: "/images/malware.svg",
+    imageFit: "contain" as const,
     centerEmblem: (
-      <div className="text-white text-6xl sm:text-7xl font-normal tracking-tighter select-none drop-shadow-[0_0_35px_rgba(255,255,255,0.45)]">
-        AE
+      <div className="flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-black/30 backdrop-blur-md border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+        <span className="w-2.5 h-2.5 rounded-full bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.8)]" />
+        <span className="text-xl sm:text-2xl font-normal text-white tracking-tight">
+          Active Defense
+        </span>
+      </div>
+    ),
+  },
+  {
+    id: "governance",
+    title: "4. SOC",
+    tags: ["GOVERNANCE", "COMPLIANCE", "AUDIT"],
+    imageSrc: "/images/compliance.svg",
+    imageFit: "contain" as const,
+    centerEmblem: (
+      <div className="flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-black/30 backdrop-blur-md border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+        <span className="w-2.5 h-2.5 rounded-full bg-purple-400 shadow-[0_0_10px_rgba(192,132,252,0.8)]" />
+        <span className="text-xl sm:text-2xl font-normal text-white tracking-tight">
+          Compliance
+        </span>
       </div>
     ),
   },
@@ -116,7 +122,7 @@ export default function CapabilitiesSection() {
 
   return (
     <section
-      id="capabilities"
+      id="features"
       ref={sectionRef}
       className="relative w-full py-28 sm:py-36 px-6 sm:px-10 lg:px-16 bg-[#1b1022] border-b border-white/5 overflow-hidden"
     >
@@ -125,14 +131,14 @@ export default function CapabilitiesSection() {
         <div ref={headerRef} className="max-w-3xl mb-16">
           <div className="mb-4">
             <span className="font-mono text-xs text-white/60 tracking-widest uppercase">
-              <ScrambleText text="Capabilities." onHover={true} />
+              <ScrambleText text="Features." onHover={true} />
             </span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-normal tracking-tight text-white leading-tight mb-4">
-            Crafted for spatial and physical systems
+            Hardware Level Monitoring and Active Threat Defence in an Airgapped Enviroment
           </h2>
           <p className="font-mono text-xs sm:text-sm tracking-wider text-white/60 uppercase">
-            Interactive bento modules with real-time state execution
+            Hardware-level visibility and device control without cloud lag.
           </p>
         </div>
 
@@ -145,10 +151,10 @@ export default function CapabilitiesSection() {
             <BentoCard
               key={item.id}
               title={item.title}
-              meta={item.meta}
               tags={item.tags}
               imageSrc={item.imageSrc}
               centerEmblem={item.centerEmblem}
+              imageFit={(item as any).imageFit}
             />
           ))}
         </div>

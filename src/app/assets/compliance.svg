@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" style="background:#F1F5F9; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <!-- Background Card Shadow -->
+    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+
+  <g transform="translate(60, 40)">
+    <!-- Top Hero Header Card -->
+    <rect x="0" y="0" width="1080" height="130" rx="14" fill="#FFFFFF" stroke="#E2E8F0" filter="url(#card-shadow)"/>
+    
+    <!-- Shield Icon Badge -->
+    <rect x="28" y="28" width="48" height="48" rx="10" fill="#EFF6FF" stroke="#BFDBFE"/>
+    <text x="52" y="58" font-size="22" text-anchor="middle" fill="#2563EB">🛡</text>
+
+    <!-- Header Text -->
+    <text x="92" y="44" font-size="10" font-weight="700" fill="#0D9488" letter-spacing="1.5">SNOC / GOVERNANCE FABRIC</text>
+    <text x="92" y="70" font-size="22" font-weight="800" fill="#0F172A">Compliance Control Room</text>
+    <text x="92" y="90" font-size="12" fill="#64748B">Turn endpoint posture, network telemetry and authentication evidence into defensible control decisions.</text>
+
+    <!-- Header Tags -->
+    <rect x="92" y="98" width="120" height="20" rx="10" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="102" y="112" font-size="10" font-weight="600" fill="#334155">● 8 Frameworks Active</text>
+
+    <rect x="220" y="98" width="145" height="20" rx="10" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="230" y="112" font-size="10" font-weight="600" fill="#334155">🗄 High-Throughput Storage</text>
+
+    <rect x="373" y="98" width="130" height="20" rx="10" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="383" y="112" font-size="10" font-weight="600" fill="#334155">● 1,482 Enrolled Assets</text>
+
+
+    <!-- Assessment Profile Card -->
+    <rect x="0" y="150" width="1080" height="310" rx="14" fill="#FFFFFF" stroke="#E2E8F0" filter="url(#card-shadow)"/>
+    
+    <text x="32" y="180" font-size="14" font-weight="700" fill="#0F172A">Assessment Profile</text>
+    <text x="32" y="196" font-size="11" fill="#64748B">Select the standards and evidence scope to evaluate now.</text>
+    <text x="32" y="222" font-size="10" font-weight="700" fill="#64748B" letter-spacing="1">FRAMEWORKS TO EVALUATE</text>
+
+    <!-- Framework Matrix (Row 1) -->
+    <!-- PCI-DSS -->
+    <rect x="32" y="235" width="158" height="66" rx="8" fill="#F8FAFC" stroke="#3B82F6" stroke-width="1.5"/>
+    <text x="44" y="254" font-size="11" font-weight="700" fill="#0F172A">PCI-DSS v4.0</text>
+    <text x="44" y="270" font-size="9" fill="#64748B">Cardholder Data Scope</text>
+    <text x="44" y="288" font-size="10" font-weight="700" fill="#10B981">96.0% Passed</text>
+
+    <!-- HIPAA -->
+    <rect x="202" y="235" width="158" height="66" rx="8" fill="#F8FAFC" stroke="#0D9488" stroke-width="1.5"/>
+    <text x="214" y="254" font-size="11" font-weight="700" fill="#0F172A">HIPAA Security Rule</text>
+    <text x="214" y="270" font-size="9" fill="#64748B">Technical Safeguards</text>
+    <text x="214" y="288" font-size="10" font-weight="700" fill="#10B981">95.1% Passed</text>
+
+    <!-- CIS -->
+    <rect x="372" y="235" width="158" height="66" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="384" y="254" font-size="11" font-weight="700" fill="#0F172A">CIS Benchmark v8</text>
+    <text x="384" y="270" font-size="9" fill="#64748B">IG-2 Defense Controls</text>
+    <text x="384" y="288" font-size="10" font-weight="700" fill="#3B82F6">89.4% Passed</text>
+
+    <!-- SOX -->
+    <rect x="542" y="235" width="158" height="66" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="554" y="254" font-size="11" font-weight="700" fill="#0F172A">Sarbanes-Oxley (SOX)</text>
+    <text x="554" y="270" font-size="9" fill="#64748B">ITGC Baseline Audit</text>
+    <text x="554" y="288" font-size="10" font-weight="700" fill="#10B981">92.3% Passed</text>
+
+    <!-- GDPR -->
+    <rect x="712" y="235" width="158" height="66" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="724" y="254" font-size="11" font-weight="700" fill="#0F172A">GDPR Article 32</text>
+    <text x="724" y="270" font-size="9" fill="#64748B">Data Encryption Policy</text>
+    <text x="724" y="288" font-size="10" font-weight="700" fill="#10B981">98.0% Passed</text>
+
+    <!-- NIST CSF -->
+    <rect x="882" y="235" width="166" height="66" rx="8" fill="#FAF5FF" stroke="#A855F7" stroke-width="1.5"/>
+    <text x="894" y="254" font-size="11" font-weight="700" fill="#6B21A8">NIST CSF 2.0</text>
+    <text x="894" y="270" font-size="9" fill="#7E22CE">Identify &amp; Protect Core</text>
+    <text x="894" y="288" font-size="10" font-weight="700" fill="#9333EA">90.2% Passed</text>
+
+    <!-- Framework Matrix (Row 2) -->
+    <!-- ISO 27001 -->
+    <rect x="32" y="311" width="158" height="54" rx="8" fill="#FEFCE8" stroke="#EAB308" stroke-width="1.5"/>
+    <text x="44" y="331" font-size="11" font-weight="700" fill="#854D0E">ISO/IEC 27001:2022</text>
+    <text x="44" y="348" font-size="10" font-weight="700" fill="#10B981">94.2% Passed</text>
+
+    <!-- NIST 800-53 -->
+    <rect x="202" y="311" width="158" height="54" rx="8" fill="#FFF1F2" stroke="#F43F5E" stroke-width="1.5"/>
+    <text x="214" y="331" font-size="11" font-weight="700" fill="#9F1239">NIST SP 800-53 Rev 5</text>
+    <text x="214" y="348" font-size="10" font-weight="700" fill="#E11D48">88.5% In Review</text>
+
+    <!-- SOC 2 -->
+    <rect x="372" y="311" width="158" height="54" rx="8" fill="#F0FDF4" stroke="#22C55E" stroke-width="1.5"/>
+    <text x="384" y="331" font-size="11" font-weight="700" fill="#166534">SOC 2 Type II</text>
+    <text x="384" y="348" font-size="10" font-weight="700" fill="#10B981">91.8% Passed</text>
+
+    <!-- Inputs & Run CTA -->
+    <text x="32" y="385" font-size="10" font-weight="700" fill="#64748B">SCOPE SELECTION</text>
+    <rect x="32" y="394" width="220" height="32" rx="6" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <text x="44" y="414" font-size="11" font-weight="600" fill="#1E293B">Organization-wide (Production)</text>
+
+    <text x="270" y="385" font-size="10" font-weight="700" fill="#64748B">SCOPE TARGET CRITERIA</text>
+    <rect x="270" y="394" width="480" height="32" rx="6" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <text x="282" y="414" font-size="11" fill="#475569">corp-dc-vlan10, srv-linux-fleet, edge-gateways-ha</text>
+
+    <!-- Buttons -->
+    <rect x="765" y="394" width="135" height="32" rx="6" fill="#2563EB"/>
+    <text x="785" y="414" font-size="11" font-weight="700" fill="#FFFFFF">⚡ Run Assessment</text>
+
+    <rect x="910" y="394" width="85" height="32" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="928" y="414" font-size="11" font-weight="600" fill="#475569">↻ Re-seed</text>
+
+
+    <!-- Assessment History Section -->
+    <rect x="0" y="480" width="1080" height="310" rx="14" fill="#FFFFFF" stroke="#E2E8F0" filter="url(#card-shadow)"/>
+    
+    <text x="32" y="512" font-size="14" font-weight="700" fill="#0F172A">Assessment History</text>
+    <text x="32" y="528" font-size="11" fill="#64748B">Stored compliance scores and verifiable evidence snapshots from previous audits.</text>
+
+    <!-- Table Header -->
+    <rect x="32" y="545" width="1016" height="30" fill="#F8FAFC" rx="4"/>
+    <text x="44" y="564" font-size="10" font-weight="700" fill="#64748B">FRAMEWORK</text>
+    <text x="360" y="564" font-size="10" font-weight="700" fill="#64748B">SCORE</text>
+    <text x="460" y="564" font-size="10" font-weight="700" fill="#64748B">PASS</text>
+    <text x="530" y="564" font-size="10" font-weight="700" fill="#64748B">FAIL</text>
+    <text x="620" y="564" font-size="10" font-weight="700" fill="#64748B">AUDITED TIMESTAMP</text>
+    <text x="820" y="564" font-size="10" font-weight="700" fill="#64748B">AUDIT POSTURE</text>
+    <text x="960" y="564" font-size="10" font-weight="700" fill="#64748B">EVIDENCE</text>
+
+    <!-- Row 1: PCI-DSS -->
+    <line x1="32" y1="615" x2="1048" y2="615" stroke="#F1F5F9"/>
+    <text x="44" y="600" font-size="12" font-weight="600" fill="#0F172A">PCI-DSS v4.0</text>
+    <text x="360" y="600" font-size="12" font-weight="700" fill="#10B981">96.20%</text>
+    <text x="460" y="600" font-size="12" fill="#0F172A">126</text>
+    <text x="530" y="600" font-size="12" fill="#E11D48">5</text>
+    <text x="620" y="600" font-size="11" fill="#64748B">2026-09-08 09:30:15</text>
+    <rect x="820" y="588" width="80" height="18" rx="4" fill="#ECFDF5"/>
+    <text x="830" y="601" font-size="10" font-weight="700" fill="#059669">Audit Ready</text>
+    <text x="960" y="601" font-size="11" font-weight="600" fill="#2563EB">Export PDF ↗</text>
+
+    <!-- Row 2: ISO 27001 -->
+    <line x1="32" y1="655" x2="1048" y2="655" stroke="#F1F5F9"/>
+    <text x="44" y="640" font-size="12" font-weight="600" fill="#0F172A">ISO/IEC 27001:2022</text>
+    <text x="360" y="640" font-size="12" font-weight="700" fill="#10B981">94.20%</text>
+    <text x="460" y="640" font-size="12" fill="#0F172A">114</text>
+    <text x="530" y="640" font-size="12" fill="#E11D48">7</text>
+    <text x="620" y="640" font-size="11" fill="#64748B">2026-09-07 14:12:40</text>
+    <rect x="820" y="628" width="80" height="18" rx="4" fill="#ECFDF5"/>
+    <text x="830" y="641" font-size="10" font-weight="700" fill="#059669">Audit Ready</text>
+    <text x="960" y="641" font-size="11" font-weight="600" fill="#2563EB">Export PDF ↗</text>
+
+    <!-- Row 3: NIST 800-53 -->
+    <line x1="32" y1="695" x2="1048" y2="695" stroke="#F1F5F9"/>
+    <text x="44" y="680" font-size="12" font-weight="600" fill="#0F172A">NIST SP 800-53 Rev 5</text>
+    <text x="360" y="680" font-size="12" font-weight="700" fill="#D97706">88.50%</text>
+    <text x="460" y="680" font-size="12" fill="#0F172A">185</text>
+    <text x="530" y="680" font-size="12" fill="#E11D48">24</text>
+    <text x="620" y="680" font-size="11" fill="#64748B">2026-09-06 18:45:10</text>
+    <rect x="820" y="668" width="86" height="18" rx="4" fill="#FEF3C7"/>
+    <text x="826" y="681" font-size="10" font-weight="700" fill="#B45309">Review Needed</text>
+    <text x="960" y="681" font-size="11" font-weight="600" fill="#2563EB">Export PDF ↗</text>
+
+    <!-- Row 4: SOC 2 -->
+    <line x1="32" y1="735" x2="1048" y2="735" stroke="#F1F5F9"/>
+    <text x="44" y="720" font-size="12" font-weight="600" fill="#0F172A">SOC 2 Type II</text>
+    <text x="360" y="720" font-size="12" font-weight="700" fill="#10B981">91.80%</text>
+    <text x="460" y="720" font-size="12" fill="#0F172A">78</text>
+    <text x="530" y="720" font-size="12" fill="#E11D48">7</text>
+    <text x="620" y="720" font-size="11" fill="#64748B">2026-09-05 11:20:00</text>
+    <rect x="820" y="708" width="80" height="18" rx="4" fill="#ECFDF5"/>
+    <text x="830" y="721" font-size="10" font-weight="700" fill="#059669">Audit Ready</text>
+    <text x="960" y="721" font-size="11" font-weight="600" fill="#2563EB">Export PDF ↗</text>
+
+    <!-- Row 5: CIS Controls -->
+    <text x="44" y="760" font-size="12" font-weight="600" fill="#0F172A">CIS Critical Controls v8</text>
+    <text x="360" y="760" font-size="12" font-weight="700" fill="#2563EB">89.40%</text>
+    <text x="460" y="760" font-size="12" fill="#0F172A">143</text>
+    <text x="530" y="760" font-size="12" fill="#E11D48">17</text>
+    <text x="620" y="760" font-size="11" fill="#64748B">2026-09-04 16:05:22</text>
+    <rect x="820" y="748" width="98" height="18" rx="4" fill="#EFF6FF"/>
+    <text x="826" y="761" font-size="10" font-weight="700" fill="#1D4ED8">Remediation Active</text>
+    <text x="960" y="761" font-size="11" font-weight="600" fill="#2563EB">Export PDF ↗</text>
+  </g>
+</svg>

@@ -70,20 +70,17 @@ export default function AboutSection() {
           {/* Left Column: Narrative */}
           <div ref={leftColRef} className="lg:col-span-5 flex flex-col">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-white leading-tight mb-6">
-              Predictable execution for complex hardware
+              From Discovery to Defense: The Vision Behind JANUS
             </h2>
 
             {/* Geist Mono Subheading */}
             <p className="font-mono text-xs sm:text-sm tracking-wider text-white/60 uppercase mb-6 pb-6 border-b border-white/10">
-              Low latency without cloud round-trips
+              Instant automated quarantine without cloud latency.
             </p>
 
             <div className="space-y-4 text-[#a69eb0] text-base sm:text-lg leading-relaxed font-normal">
               <p>
-                Traditional spatial systems depend on distant cloud instances, introducing variable network latency and coordination delays when physical devices interact.
-              </p>
-              <p>
-                Janus moves execution directly to local networks and edge nodes. By processing state changes locally, systems maintain tight coordination and predictable response times.
+                JANUS converges Layer-2/3 network management, SIEM, and automated SOAR into one pane of glass. By bridging the NOC-SOC divide, it enables teams to map dynamic infrastructure, detect anomalies in real time, and trigger automated firewall quarantines in milliseconds, replacing scattered tool stacks with unified, zero-latency defense.
               </p>
             </div>
 
@@ -109,66 +106,42 @@ export default function AboutSection() {
           {/* Right Column: Architectural Pillars */}
           <div ref={cardsRef} className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
             {/* Pillar 1 */}
-            <div className="p-7 rounded-2xl bg-white/[0.02] hover:bg-white/[0.035] border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col justify-between">
+            <div className="p-7 min-h-[250px] rounded-2xl bg-white/[0.02] hover:bg-white/[0.035] border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col justify-between">
               <div>
-                <h3 className="text-xl font-normal text-white mb-1">Native engine</h3>
-                <div className="font-mono text-xs text-white/50 tracking-wider uppercase mb-3">
-                  Rust and C++ runtime
-                </div>
+                <h3 className="text-xl font-normal text-white mb-3">On Prem</h3>
                 <p className="text-sm text-[#a69eb0] leading-relaxed font-normal">
-                  Direct memory management without garbage collection pauses. Designed to run reliably on edge servers and embedded systems.
+                  JANUS deploys natively within your perimeter, keeping all your data strictly on-premise. You maintain complete data sovereignty and execute sub-second firewall mitigations without a single packet leaving your private network.
                 </p>
-              </div>
-              <div className="mt-6 pt-4 border-t border-white/5 font-mono text-xs text-white/60">
-                Zero allocation loops
               </div>
             </div>
 
             {/* Pillar 2 */}
-            <div className="p-7 rounded-2xl bg-white/[0.02] hover:bg-white/[0.035] border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col justify-between">
+            <div className="p-7 min-h-[250px] rounded-2xl bg-white/[0.02] hover:bg-white/[0.035] border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col justify-between">
               <div>
-                <h3 className="text-xl font-normal text-white mb-1">Clock synchronization</h3>
-                <div className="font-mono text-xs text-white/50 tracking-wider uppercase mb-3">
-                  Sub-millisecond alignment
-                </div>
+                <h3 className="text-xl font-normal text-white mb-3">Unified Dashboard</h3>
                 <p className="text-sm text-[#a69eb0] leading-relaxed font-normal">
-                  Coordinated hardware timing ensures event sequences execute in exact chronological order across distributed nodes.
+                  Monitor network health, analyze security events, and execute automated playbooks from a single unified workspace.
                 </p>
-              </div>
-              <div className="mt-6 pt-4 border-t border-white/5 font-mono text-xs text-white/60">
-                Synchronized event order
               </div>
             </div>
 
             {/* Pillar 3 */}
-            <div className="p-7 rounded-2xl bg-white/[0.02] hover:bg-white/[0.035] border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col justify-between">
+            <div className="p-7 min-h-[250px] rounded-2xl bg-white/[0.02] hover:bg-white/[0.035] border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col justify-between">
               <div>
-                <h3 className="text-xl font-normal text-white mb-1">Direct transport</h3>
-                <div className="font-mono text-xs text-white/50 tracking-wider uppercase mb-3">
-                  Peer communication
-                </div>
+                <h3 className="text-xl font-normal text-white mb-3">Direct transport</h3>
                 <p className="text-sm text-[#a69eb0] leading-relaxed font-normal">
                   Nodes communicate directly over low-overhead socket protocols, avoiding centralized bottlenecks and unnecessary hops.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-white/5 font-mono text-xs text-white/60">
-                Low overhead routing
-              </div>
             </div>
 
             {/* Pillar 4 */}
-            <div className="p-7 rounded-2xl bg-white/[0.02] hover:bg-white/[0.035] border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col justify-between">
+            <div className="p-7 min-h-[250px] rounded-2xl bg-white/[0.02] hover:bg-white/[0.035] border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col justify-between">
               <div>
-                <h3 className="text-xl font-normal text-white mb-1">State verification</h3>
-                <div className="font-mono text-xs text-white/50 tracking-wider uppercase mb-3">
-                  Data integrity
-                </div>
+                <h3 className="text-xl font-normal text-white mb-3">State verification</h3>
                 <p className="text-sm text-[#a69eb0] leading-relaxed font-normal">
                   State changes are validated mathematically across nodes to maintain consistency and prevent unauthorized tampering.
                 </p>
-              </div>
-              <div className="mt-6 pt-4 border-t border-white/5 font-mono text-xs text-white/60">
-                Tamper-resistant state
               </div>
             </div>
           </div>

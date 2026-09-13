@@ -18,7 +18,7 @@ export default function Footer() {
           {/* Brand & Mission */}
           <div className="md:col-span-5 flex flex-col items-start">
             <span className="font-normal text-xl tracking-tight text-white mb-4">
-              Janus
+              JANUS
             </span>
 
             <p className="text-sm text-[#a69eb0] leading-relaxed max-w-md mb-6 font-normal">
@@ -42,12 +42,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#capabilities" className="hover:text-white transition-colors">
+                <a href="#features" className="hover:text-white transition-colors">
                   Spatial queries
                 </a>
               </li>
               <li>
-                <a href="#capabilities" className="hover:text-white transition-colors">
+                <a href="#features" className="hover:text-white transition-colors">
                   Transport layer
                 </a>
               </li>
@@ -99,7 +99,7 @@ export default function Footer() {
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                alert("Subscribed to Janus updates.");
+                alert("Subscribed to JANUS updates.");
               }}
               className="flex flex-col gap-2"
             >
@@ -122,7 +122,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-white/40">
           <div>
-            &copy; {new Date().getFullYear()} Janus Spatial Systems. All rights reserved.
+            &copy; {new Date().getFullYear()} JANUS Spatial Systems. All rights reserved.
           </div>
 
           <div>

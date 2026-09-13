@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Janus — Distributed Spatial Computing",
+  title: "JANUS — Distributed Spatial Computing",
   description:
     "Low-latency distributed engine for real-time spatial calculations, physical simulation, and connected hardware.",
   keywords: [
@@ -36,7 +36,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}
     >
-      <body className="min-h-screen bg-[#1b1022] text-white antialiased selection:bg-white selection:text-[#1b1022]">
+      <body className="min-h-screen bg-gradient-to-br from-[#1b1022] via-[#2d1b3b] to-[#1b1022] bg-fixed text-white antialiased selection:bg-white selection:text-[#1b1022]">
         {children}
       </body>
     </html>
