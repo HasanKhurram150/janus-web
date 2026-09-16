@@ -175,7 +175,7 @@ export default function Footer() {
                 href="https://www.antilineartech.com/contact"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-xs font-semibold bg-white text-janus-bg hover:bg-white/90 hover:shadow-[0_0_25px_rgba(168,85,247,0.35)] transition-all active:scale-95 duration-200"
+                className="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-xs font-semibold bg-purple-500 hover:bg-purple-400 text-white shadow-[0_0_25px_rgba(168,85,247,0.35)] hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] transition-all active:scale-95 duration-200"
               >
                 Get in Touch
               </a>
