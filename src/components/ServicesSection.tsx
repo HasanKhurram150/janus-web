@@ -126,11 +126,11 @@ export default function ServicesSection({ showAll = false }: { showAll?: boolean
     <section
       id="services"
       ref={sectionRef}
-      className="relative w-full py-28 sm:py-36 px-6 sm:px-10 lg:px-16 bg-gradient-to-br from-[#1b1022] via-[#2d1b3b] to-[#1b1022] text-white"
+      className="relative w-full py-16 sm:py-24 px-6 sm:px-10 lg:px-16 bg-theme-gradient text-white"
     >
       <div className="w-full max-w-7xl mx-auto">
         {/* Section Header */}
-        <div ref={headerRef} className="max-w-3xl mb-24">
+        <div ref={headerRef} className="max-w-3xl mb-12 sm:mb-16">
           <div className="mb-4">
             <span className="font-mono text-xs text-white/60 tracking-widest uppercase">
               <ScrambleText text="Capabilities." onHover={true} />
@@ -149,7 +149,7 @@ export default function ServicesSection({ showAll = false }: { showAll?: boolean
               ref={(el) => {
                 cardRefs.current[index] = el;
               }}
-                className={`sticky top-20 sm:top-32 bg-gradient-to-br from-[#1b1022] via-[#2d1b3b] to-[#1b1022] flex flex-col pt-20 pb-20 sm:pt-28 sm:pb-32 border-t border-white/10 ${
+                className={`sticky top-16 sm:top-24 bg-theme-gradient flex flex-col pt-10 pb-14 sm:pt-12 sm:pb-16 border-t border-white/10 ${
                   index === (showAll ? SERVICES.length - 1 : 4) ? "border-b" : ""
                 }`}
                 style={{
@@ -164,16 +164,101 @@ export default function ServicesSection({ showAll = false }: { showAll?: boolean
                       <div className="text-6xl sm:text-8xl font-light text-white/90 tracking-tighter">
                         {service.id}
                       </div>
-                      <div className="mt-3 font-mono text-xs text-purple-400 uppercase tracking-widest">
-                        {service.id === "01" ? "AIR-GAPPED SIEM & SOAR" : "NETWORK DEFENSE MODULE"}
-                      </div>
                     </div>
 
-                    <div className="mt-12 flex flex-col items-start gap-6">
+                    <div className="mt-20 sm:mt-32 flex flex-col items-start gap-6 pb-2">
                       {service.id === "01" && (
                         <Link
                           href="/services/siem"
-                          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-purple-500/20 hover:bg-purple-500/35 text-purple-200 border border-purple-500/40 text-xs font-mono tracking-wider transition-all duration-300 shadow-[0_0_20px_rgba(168,85,247,0.25)] hover:scale-105 active:scale-95 cursor-pointer group"
+                          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-medium border border-purple-400/40 text-xs font-mono tracking-wider transition-all duration-300 shadow-[0_0_25px_rgba(168,85,247,0.4)] hover:scale-105 active:scale-95 cursor-pointer group"
+                        >
+                          <span>See more</span>
+                          <span className="transition-transform duration-300 group-hover:translate-x-1">
+                            →
+                          </span>
+                        </Link>
+                      )}
+                      {service.id === "02" && (
+                        <Link
+                          href="/services/ipam"
+                          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-medium border border-purple-400/40 text-xs font-mono tracking-wider transition-all duration-300 shadow-[0_0_25px_rgba(168,85,247,0.4)] hover:scale-105 active:scale-95 cursor-pointer group"
+                        >
+                          <span>See more</span>
+                          <span className="transition-transform duration-300 group-hover:translate-x-1">
+                            →
+                          </span>
+                        </Link>
+                      )}
+                      {service.id === "03" && (
+                        <Link
+                          href="/services/nac"
+                          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-medium border border-purple-400/40 text-xs font-mono tracking-wider transition-all duration-300 shadow-[0_0_25px_rgba(168,85,247,0.4)] hover:scale-105 active:scale-95 cursor-pointer group"
+                        >
+                          <span>See more</span>
+                          <span className="transition-transform duration-300 group-hover:translate-x-1">
+                            →
+                          </span>
+                        </Link>
+                      )}
+                      {service.id === "04" && (
+                        <Link
+                          href="/services/endpoint-security"
+                          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-medium border border-purple-400/40 text-xs font-mono tracking-wider transition-all duration-300 shadow-[0_0_25px_rgba(168,85,247,0.4)] hover:scale-105 active:scale-95 cursor-pointer group"
+                        >
+                          <span>See more</span>
+                          <span className="transition-transform duration-300 group-hover:translate-x-1">
+                            →
+                          </span>
+                        </Link>
+                      )}
+                      {service.id === "05" && (
+                        <Link
+                          href="/services/vulnerability-scanner"
+                          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-medium border border-purple-400/40 text-xs font-mono tracking-wider transition-all duration-300 shadow-[0_0_25px_rgba(168,85,247,0.4)] hover:scale-105 active:scale-95 cursor-pointer group"
+                        >
+                          <span>See more</span>
+                          <span className="transition-transform duration-300 group-hover:translate-x-1">
+                            →
+                          </span>
+                        </Link>
+                      )}
+                      {service.id === "06" && (
+                        <Link
+                          href="/services/kubernetes-monitoring"
+                          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-medium border border-purple-400/40 text-xs font-mono tracking-wider transition-all duration-300 shadow-[0_0_25px_rgba(168,85,247,0.4)] hover:scale-105 active:scale-95 cursor-pointer group"
+                        >
+                          <span>See more</span>
+                          <span className="transition-transform duration-300 group-hover:translate-x-1">
+                            →
+                          </span>
+                        </Link>
+                      )}
+                      {service.id === "07" && (
+                        <Link
+                          href="/services/sla-management"
+                          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-medium border border-purple-400/40 text-xs font-mono tracking-wider transition-all duration-300 shadow-[0_0_25px_rgba(168,85,247,0.4)] hover:scale-105 active:scale-95 cursor-pointer group"
+                        >
+                          <span>See more</span>
+                          <span className="transition-transform duration-300 group-hover:translate-x-1">
+                            →
+                          </span>
+                        </Link>
+                      )}
+                      {service.id === "08" && (
+                        <Link
+                          href="/services/dlp"
+                          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-medium border border-purple-400/40 text-xs font-mono tracking-wider transition-all duration-300 shadow-[0_0_25px_rgba(168,85,247,0.4)] hover:scale-105 active:scale-95 cursor-pointer group"
+                        >
+                          <span>See more</span>
+                          <span className="transition-transform duration-300 group-hover:translate-x-1">
+                            →
+                          </span>
+                        </Link>
+                      )}
+                      {service.id === "09" && (
+                        <Link
+                          href="/services/network-monitor"
+                          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-medium border border-purple-400/40 text-xs font-mono tracking-wider transition-all duration-300 shadow-[0_0_25px_rgba(168,85,247,0.4)] hover:scale-105 active:scale-95 cursor-pointer group"
                         >
                           <span>See more</span>
                           <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -211,7 +296,7 @@ export default function ServicesSection({ showAll = false }: { showAll?: boolean
                         fill
                         className="object-cover object-top opacity-85 transition-transform duration-700 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#1b1022] via-transparent to-black/30" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-janus-bg via-transparent to-black/30" />
                       <div className="absolute bottom-3 left-4 flex items-center gap-2 font-mono text-[11px] text-white/70">
                         <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                         <span>Sovereign Air-Gapped Intelligence</span>
@@ -221,8 +306,88 @@ export default function ServicesSection({ showAll = false }: { showAll?: boolean
                           href="/services/siem"
                           className="absolute inset-0 bg-black/50 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer z-10"
                         >
-                          <span className="px-6 py-2.5 rounded-full bg-white text-[#1b1022] font-mono text-xs font-semibold shadow-2xl hover:bg-purple-100 transition-colors">
+                          <span className="px-6 py-2.5 rounded-full bg-white text-janus-bg font-mono text-xs font-semibold shadow-2xl hover:bg-purple-100 transition-colors">
                             Click to explore full SEIM & SOAR product page →
+                          </span>
+                        </Link>
+                      )}
+                      {service.id === "02" && (
+                        <Link
+                          href="/services/ipam"
+                          className="absolute inset-0 bg-black/50 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer z-10"
+                        >
+                          <span className="px-6 py-2.5 rounded-full bg-white text-janus-bg font-mono text-xs font-semibold shadow-2xl hover:bg-purple-100 transition-colors">
+                            Click to explore full IPAM product page →
+                          </span>
+                        </Link>
+                      )}
+                      {service.id === "03" && (
+                        <Link
+                          href="/services/nac"
+                          className="absolute inset-0 bg-black/50 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer z-10"
+                        >
+                          <span className="px-6 py-2.5 rounded-full bg-white text-janus-bg font-mono text-xs font-semibold shadow-2xl hover:bg-purple-100 transition-colors">
+                            Click to explore full NAC product page →
+                          </span>
+                        </Link>
+                      )}
+                      {service.id === "04" && (
+                        <Link
+                          href="/services/endpoint-security"
+                          className="absolute inset-0 bg-black/50 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer z-10"
+                        >
+                          <span className="px-6 py-2.5 rounded-full bg-white text-janus-bg font-mono text-xs font-semibold shadow-2xl hover:bg-purple-100 transition-colors">
+                            Click to explore full Endpoint Security product page →
+                          </span>
+                        </Link>
+                      )}
+                      {service.id === "05" && (
+                        <Link
+                          href="/services/vulnerability-scanner"
+                          className="absolute inset-0 bg-black/50 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer z-10"
+                        >
+                          <span className="px-6 py-2.5 rounded-full bg-white text-janus-bg font-mono text-xs font-semibold shadow-2xl hover:bg-purple-100 transition-colors">
+                            Click to explore full Vulnerability Scanner product page →
+                          </span>
+                        </Link>
+                      )}
+                      {service.id === "06" && (
+                        <Link
+                          href="/services/kubernetes-monitoring"
+                          className="absolute inset-0 bg-black/50 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer z-10"
+                        >
+                          <span className="px-6 py-2.5 rounded-full bg-white text-janus-bg font-mono text-xs font-semibold shadow-2xl hover:bg-purple-100 transition-colors">
+                            Click to explore full Kubernetes Monitoring product page →
+                          </span>
+                        </Link>
+                      )}
+                      {service.id === "07" && (
+                        <Link
+                          href="/services/sla-management"
+                          className="absolute inset-0 bg-black/50 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer z-10"
+                        >
+                          <span className="px-6 py-2.5 rounded-full bg-white text-janus-bg font-mono text-xs font-semibold shadow-2xl hover:bg-purple-100 transition-colors">
+                            Click to explore full SLA Management product page →
+                          </span>
+                        </Link>
+                      )}
+                      {service.id === "08" && (
+                        <Link
+                          href="/services/dlp"
+                          className="absolute inset-0 bg-black/50 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer z-10"
+                        >
+                          <span className="px-6 py-2.5 rounded-full bg-white text-janus-bg font-mono text-xs font-semibold shadow-2xl hover:bg-purple-100 transition-colors">
+                            Click to explore full DLP product page →
+                          </span>
+                        </Link>
+                      )}
+                      {service.id === "09" && (
+                        <Link
+                          href="/services/network-monitor"
+                          className="absolute inset-0 bg-black/50 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer z-10"
+                        >
+                          <span className="px-6 py-2.5 rounded-full bg-white text-janus-bg font-mono text-xs font-semibold shadow-2xl hover:bg-purple-100 transition-colors">
+                            Click to explore full Network Monitor product page →
                           </span>
                         </Link>
                       )}
@@ -250,8 +415,12 @@ export default function ServicesSection({ showAll = false }: { showAll?: boolean
         {/* See More Button */}
         {!showAll && (
           <div className="mt-16 text-center">
-            <a href="/services" className="px-8 py-4 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 text-white font-medium tracking-wide transition-all duration-300">
-              See more capabilities
+            <a
+              href="/services"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-medium tracking-wide border border-purple-400/40 shadow-[0_0_30px_rgba(168,85,247,0.4)] transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
+            >
+              <span>See more capabilities</span>
+              <span className="text-lg leading-none">→</span>
             </a>
           </div>
         )}

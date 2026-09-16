@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import ScrambleText from "./ScrambleText";
 
 interface SiemDeepDiveProps {
   onClose?: () => void;
@@ -161,11 +160,6 @@ export default function SiemDeepDive({ onClose }: SiemDeepDiveProps) {
 
       {/* Main Big Heading */}
       <div className="pt-10 pb-12 max-w-5xl">
-        <div className="mb-4">
-          <span className="font-mono text-xs text-purple-400/90 tracking-widest uppercase">
-            <ScrambleText text="SIEM OPERATIONS PLATFORM" onHover={true} />
-          </span>
-        </div>
         <h2 className="text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-tight mb-6">
           Sovereign Telemetry at Your Fingertips:{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-200 via-white to-purple-400 font-medium">
@@ -187,7 +181,7 @@ export default function SiemDeepDive({ onClose }: SiemDeepDiveProps) {
       </div>
 
       {/* Part 1: Splunk "Power your SecOps" Style Interactive 3-Pillar Component */}
-      <div className="mb-20 rounded-2xl bg-[#1b1022]/80 border border-white/10 p-6 sm:p-8 lg:p-10 overflow-hidden relative">
+      <div className="mb-20 rounded-2xl bg-janus-bg/80 border border-white/10 p-6 sm:p-8 lg:p-10 overflow-hidden relative">
         <div className="absolute top-0 right-0 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none" />
 
         {/* Tab Buttons */}
@@ -206,7 +200,7 @@ export default function SiemDeepDive({ onClose }: SiemDeepDiveProps) {
               >
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-mono text-[11px] text-purple-400 font-semibold tracking-wider uppercase">
-                    0{idx + 1}. PILLAR
+                    0{idx + 1}
                   </span>
                   {isActive && <span className="w-2 h-2 rounded-full bg-purple-400 shadow-[0_0_8px_#a855f7]" />}
                 </div>
@@ -222,9 +216,6 @@ export default function SiemDeepDive({ onClose }: SiemDeepDiveProps) {
         <div className="pt-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Left Column: Descriptive Narrative & Technical Attributes */}
           <div className="lg:col-span-6 flex flex-col justify-center">
-            <span className="font-mono text-xs text-purple-400 tracking-widest uppercase mb-2">
-              {pillars[activePillar].badge}
-            </span>
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-normal tracking-tight text-white leading-tight mb-5">
               {pillars[activePillar].title}
             </h3>
@@ -403,9 +394,6 @@ export default function SiemDeepDive({ onClose }: SiemDeepDiveProps) {
       {/* Part 2: Analytics at Your Fingertips (Deep-Dive Threat Investigation Grid) */}
       <div className="pt-8 border-t border-white/10">
         <div className="max-w-4xl mb-12">
-          <span className="font-mono text-xs text-purple-400 tracking-widest uppercase mb-2 block">
-            ANALYTICS AT WIRE SPEED
-          </span>
           <h3 className="text-2xl sm:text-4xl font-normal tracking-tight text-white leading-tight mb-3">
             Analytics at Your Fingertips: Monitor, Detect, and Investigate Threats at Wire Speed
           </h3>
@@ -462,7 +450,7 @@ export default function SiemDeepDive({ onClose }: SiemDeepDiveProps) {
           ))}
 
           {/* Quick Summary / CTA block filling 6th slot */}
-          <div className="p-6 sm:p-7 rounded-2xl border border-purple-500/30 bg-gradient-to-br from-purple-900/30 to-[#1b1022] flex flex-col justify-between">
+          <div className="p-6 sm:p-7 rounded-2xl border border-purple-500/30 bg-gradient-to-br from-purple-900/30 to-janus-bg flex flex-col justify-between">
             <div>
               <span className="font-mono text-[10px] text-purple-300 uppercase tracking-widest font-semibold mb-3 block">
                 TOTAL DEFENSE ASSURANCE
@@ -477,7 +465,7 @@ export default function SiemDeepDive({ onClose }: SiemDeepDiveProps) {
             {onClose && (
               <button
                 onClick={onClose}
-                className="w-full py-3 rounded-full bg-white/10 hover:bg-white text-white hover:text-[#1b1022] border border-white/20 font-mono text-xs font-semibold tracking-wider transition-all duration-300"
+                className="w-full py-3 rounded-full bg-white/10 hover:bg-white text-white hover:text-janus-bg border border-white/20 font-mono text-xs font-semibold tracking-wider transition-all duration-300"
               >
                 Done exploring ↑
               </button>
@@ -491,7 +479,7 @@ export default function SiemDeepDive({ onClose }: SiemDeepDiveProps) {
         <div className="mt-14 pt-8 border-t border-white/10 flex justify-center">
           <button
             onClick={onClose}
-            className="flex items-center gap-2 px-8 py-3 rounded-full bg-white/10 hover:bg-white text-white hover:text-[#1b1022] border border-white/20 font-mono text-xs font-medium tracking-wider transition-all duration-300"
+            className="flex items-center gap-2 px-8 py-3 rounded-full bg-white/10 hover:bg-white text-white hover:text-janus-bg border border-white/20 font-mono text-xs font-medium tracking-wider transition-all duration-300"
           >
             <span>Close detailed view</span>
             <span>↑</span>

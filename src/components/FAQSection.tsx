@@ -25,7 +25,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="faqs" className="relative w-full py-24 sm:py-32 px-6 sm:px-10 lg:px-16 bg-[#1b1022] text-white">
+    <section id="faqs" className="relative w-full py-24 sm:py-32 px-6 sm:px-10 lg:px-16 bg-janus-bg text-white">
       <div className="w-full max-w-7xl mx-auto flex flex-col gap-24">
         
         {/* Top: Two Column Layout */}
@@ -91,7 +91,7 @@ export default function FAQSection() {
           
           <div className="w-full md:w-auto flex-shrink-0">
             <a 
-              href="https://www.antilineartech.com/"
+              href="https://www.antilineartech.com/contact"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-8 py-4 rounded-xl bg-purple-500 hover:bg-purple-400 text-white font-medium transition-colors w-full sm:w-auto text-lg text-center"

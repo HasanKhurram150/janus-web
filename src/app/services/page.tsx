@@ -1,12 +1,10 @@
-import SmoothScroll from "@/components/SmoothScroll";
 import Navbar from "@/components/Navbar";
 import ServicesSection from "@/components/ServicesSection";
 import Footer from "@/components/Footer";
 
 export default function ServicesPage() {
   return (
-    <SmoothScroll>
-      <div className="relative w-full min-h-screen text-white flex flex-col items-center overflow-x-clip bg-[#1b1022]">
+    <div className="relative w-full min-h-screen text-white flex flex-col items-center overflow-x-clip bg-janus-bg">
         <Navbar />
         
         <main className="w-full flex flex-col items-center pt-24">
@@ -15,6 +13,5 @@ export default function ServicesPage() {
 
         <Footer />
       </div>
-    </SmoothScroll>
   );
 }

@@ -151,7 +151,7 @@ export default function UsecasesSection() {
     <section
       id="usecases"
       ref={sectionRef}
-      className="relative w-full py-28 sm:py-36 px-6 sm:px-10 lg:px-16 bg-[#1b1022] border-b border-white/5 overflow-hidden"
+      className="relative w-full py-28 sm:py-36 px-6 sm:px-10 lg:px-16 bg-janus-bg border-b border-white/5 overflow-hidden"
     >
       <div className="w-full max-w-7xl mx-auto">
         {/* Section Header */}

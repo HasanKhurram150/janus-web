@@ -53,7 +53,7 @@ export default function HeroSection() {
       className="relative w-full h-screen flex flex-col items-center justify-center pt-32 pb-12 px-4 sm:px-8 overflow-hidden"
     >
       {/* Background ambient light */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[800px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#5e2b97]/30 via-[#1b1022]/0 to-[#1b1022]/0 blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[800px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#5e2b97]/30 via-transparent to-transparent blur-[100px] pointer-events-none" />
 
       {/* Main Bounded Container */}
       <div className="relative w-full max-w-[1400px] flex-1 border border-white/10 rounded-[32px] sm:rounded-[48px] overflow-hidden flex flex-col justify-center p-8 sm:p-16 lg:p-24 bg-white/[0.02] backdrop-blur-sm">
@@ -93,7 +93,7 @@ export default function HeroSection() {
 
           <h1 className="text-4xl sm:text-6xl md:text-[72px] lg:text-[88px] font-medium tracking-tight text-white leading-[1.05] mb-4 max-w-[1000px]">
             Every switch port mapped. <br /> Every log indexed.{" "}
-            <span className="inline-block bg-[#a476ff] text-[#1b1022] px-3 py-0 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl ml-1 shadow-[0_0_30px_rgba(164,118,255,0.3)]">
+            <span className="inline-block bg-[#a476ff] text-janus-bg px-3 py-0 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl ml-1 shadow-[0_0_30px_rgba(164,118,255,0.3)]">
               Every threat killed.
             </span>
           </h1>

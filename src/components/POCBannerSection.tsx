@@ -12,7 +12,7 @@ const LOGOS = [
 
 export default function POCBannerSection() {
   return (
-    <section className="relative w-full py-6 bg-white/[0.03] overflow-hidden border-b border-white/5">
+    <section id="poc" className="relative w-full py-6 bg-white/[0.03] overflow-hidden border-b border-white/5">
       <div className="w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 mb-2 text-center">
         <p className="font-mono text-xl sm:text-2xl tracking-widest text-white uppercase">
           Our Partners

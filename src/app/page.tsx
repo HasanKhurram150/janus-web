@@ -1,4 +1,3 @@
-import SmoothScroll from "@/components/SmoothScroll";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
@@ -12,8 +11,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <SmoothScroll>
-      <div className="relative w-full min-h-screen text-white flex flex-col items-center overflow-x-clip">
+    <div className="relative w-full min-h-screen text-white flex flex-col items-center overflow-x-clip">
         {/* Full-width sticky navigation */}
         <Navbar />
 
@@ -45,6 +43,5 @@ export default function Home() {
         {/* Full-width Footer */}
         <Footer />
       </div>
-    </SmoothScroll>
   );
 }

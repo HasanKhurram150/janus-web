@@ -1,12 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import SmoothScroll from "@/components/SmoothScroll";
-import ScrambleText from "@/components/ScrambleText";
 
 interface TabData {
   id: string;
@@ -192,11 +190,27 @@ const COMPARISON_ROWS = [
 export default function SiemProductPage() {
   const [activeTab, setActiveTab] = useState<string>("visibility");
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if ("scrollRestoration" in window.history) {
+        window.history.scrollRestoration = "manual";
+      }
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+      const lenis = (
+        window as unknown as {
+          __lenis?: { scrollTo: (target: number, opts?: { immediate?: boolean }) => void };
+        }
+      ).__lenis;
+      if (lenis) {
+        lenis.scrollTo(0, { immediate: true });
+      }
+    }
+  }, []);
+
   const currentTab = SEC_OPS_TABS.find((t) => t.id === activeTab) || SEC_OPS_TABS[0];
 
   return (
-    <SmoothScroll>
-      <div className="relative w-full min-h-screen text-white flex flex-col items-center overflow-x-clip bg-[#1b1022]">
+    <div className="relative w-full min-h-screen text-white flex flex-col items-center overflow-x-clip bg-janus-bg">
         {/* Main Sticky Navbar */}
         <Navbar />
 
@@ -204,7 +218,7 @@ export default function SiemProductPage() {
         {/* Hero Section (Splunk-Style Layout with Deep Purple JANUS Theme) */}
         <section
           id="overview"
-          className="relative w-full min-h-screen bg-gradient-to-br from-[#1b1022] via-[#2d1b3b] to-[#1b1022] text-white pt-24 sm:pt-28 pb-10 sm:pb-14 px-6 sm:px-12 lg:px-16 overflow-hidden border-b border-white/10 flex flex-col justify-center"
+          className="relative w-full min-h-screen bg-theme-gradient text-white pt-24 sm:pt-28 pb-10 sm:pb-14 px-6 sm:px-12 lg:px-16 overflow-hidden border-b border-white/10 flex flex-col justify-center"
         >
           {/* Ambient Purple Glows */}
           <div className="absolute top-10 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl pointer-events-none" />
@@ -214,11 +228,6 @@ export default function SiemProductPage() {
           <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center relative z-10 my-auto">
             {/* Left Column: Heading, Subtitle & Action Cards */}
             <div className="lg:col-span-6 flex flex-col items-start text-left">
-              {/* Eyebrow */}
-              <div className="font-mono text-xs sm:text-sm font-semibold tracking-widest text-purple-400 uppercase mb-3.5">
-                JANUS ENTERPRISE SECURITY ESSENTIALS
-              </div>
-
               {/* Huge Bold Title */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.05] mb-5">
                The industry-standard<br />
@@ -250,7 +259,7 @@ export default function SiemProductPage() {
 
                 {/* Purple Outlined Glass Button */}
                 <a
-                  href="#comparison"
+                  href="#poc"
                   className="bg-white/5 hover:bg-white/10 text-purple-200 border-2 border-purple-500/50 p-4 sm:p-5 rounded-2xl shadow-[0_0_20px_rgba(168,85,247,0.15)] transition-all duration-300 hover:scale-[1.02] active:scale-95 text-left flex-1 group cursor-pointer"
                 >
                   <div className="font-semibold text-base sm:text-lg flex items-center justify-between text-purple-200 group-hover:text-white">
@@ -470,10 +479,7 @@ export default function SiemProductPage() {
         <section id="outcomes" className="w-full py-16 px-6 sm:px-12 lg:px-16 border-y border-white/10 bg-[#160b1b]/60">
           <div className="max-w-7xl mx-auto">
             <div className="mb-10 text-center">
-              <span className="text-xs font-mono uppercase text-purple-400 tracking-widest">
-                Proven Operational Impact
-              </span>
-              <h2 className="text-2xl sm:text-4xl font-light text-white mt-2">
+              <h2 className="text-2xl sm:text-4xl font-light text-white">
                 Measurable Security ROI Without Cloud Compromise
               </h2>
             </div>
@@ -535,11 +541,6 @@ export default function SiemProductPage() {
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}
             <div className="max-w-4xl mb-16">
-              <div className="mb-3">
-                <span className="text-xs font-mono uppercase tracking-widest text-purple-400">
-                  <ScrambleText text="Sovereign Telemetry" onHover={true} />
-                </span>
-              </div>
               <h2 className="text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-[1.15]">
                 Sovereign Telemetry at Your Fingertips:{" "}
                 <span className="bg-gradient-to-r from-purple-200 via-purple-300 to-indigo-200 bg-clip-text text-transparent">
@@ -577,7 +578,7 @@ export default function SiemProductPage() {
                             isActive ? "text-purple-300" : "text-white/40 group-hover:text-white/60"
                           }`}
                         >
-                          0{idx + 1} // {tab.badge}
+                          0{idx + 1}
                         </span>
                         {isActive && (
                           <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse shadow-[0_0_6px_#c084fc]" />
@@ -601,9 +602,6 @@ export default function SiemProductPage() {
               {/* Left Column: Detailed Description (Unboxed without container outline) */}
               <div className="lg:col-span-6 flex flex-col justify-between py-2 sm:py-4 lg:pr-8">
                 <div>
-                  <div className="inline-block font-mono text-xs text-purple-400 uppercase tracking-widest mb-4">
-                    {currentTab.badge}
-                  </div>
                   <h3 className="text-2xl sm:text-4xl font-medium tracking-tight text-white mb-6 leading-snug">
                     {currentTab.title}
                   </h3>
@@ -691,17 +689,12 @@ export default function SiemProductPage() {
 
         {/* Section 4: Analytics at Your Fingertips & Detection Engine Grid */}
         <section
-          id="detection-engine"
-          className="w-full py-24 sm:py-32 px-6 sm:px-12 lg:px-16 bg-gradient-to-b from-[#180d22] via-[#1b1022] to-[#180d22] border-t border-white/10"
+          id="architecture"
+          className="w-full py-24 sm:py-32 px-6 sm:px-12 lg:px-16 bg-theme-gradient-b border-t border-white/10"
         >
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}
             <div className="max-w-4xl mb-16">
-              <div className="mb-3">
-                <span className="text-xs font-mono uppercase tracking-widest text-purple-400">
-                  <ScrambleText text="Analytics at Your Fingertips" onHover={true} />
-                </span>
-              </div>
               <h2 className="text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-[1.15]">
                 Analytics at Your Fingertips:{" "}
                 <span className="bg-gradient-to-r from-purple-200 via-purple-300 to-indigo-200 bg-clip-text text-transparent">
@@ -724,50 +717,34 @@ export default function SiemProductPage() {
               {DETECTION_PILLARS.map((pillar, idx) => (
                 <div
                   key={idx}
-                  className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] p-8 sm:p-10 rounded-3xl bg-white/[0.04] border border-white/10 hover:border-purple-500/40 hover:bg-white/[0.06] transition-all duration-300 flex flex-col justify-between group"
+                  className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] p-8 sm:p-10 rounded-3xl bg-white/[0.04] border border-white/10 hover:border-purple-500/40 hover:bg-white/[0.06] transition-all duration-300 flex flex-col group"
                 >
-                  <div>
-                    <div className="flex items-center justify-between gap-4 mb-6">
-                      <span className="font-mono text-xs uppercase tracking-wider text-purple-300 bg-purple-900/30 px-3 py-1 rounded-full border border-purple-500/20">
-                        {pillar.badge}
-                      </span>
-                      <span className="font-mono text-xs text-white/30">
-                        0{idx + 1}
-                      </span>
-                    </div>
-
-                    <h3 className="text-xl sm:text-2xl font-medium text-white mb-4 leading-snug">
-                      {pillar.title}
-                    </h3>
-
-                    <p className="text-sm sm:text-base text-white/70 font-light leading-relaxed mb-6">
-                      {pillar.description}
-                    </p>
+                  <div className="flex items-center justify-end mb-6">
+                    <span className="font-mono text-xs text-white/30">
+                      0{idx + 1}
+                    </span>
                   </div>
 
-                  <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-white/50">
-                    <span>Key Capability:</span>
-                    <span className="text-purple-300 font-medium">{pillar.highlight}</span>
-                  </div>
+                  <h3 className="text-xl sm:text-2xl font-medium text-white mb-4 leading-snug">
+                    {pillar.title}
+                  </h3>
+
+                  <p className="text-sm sm:text-base text-white/70 font-light leading-relaxed">
+                    {pillar.description}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Section 5: Sovereign SIEM vs Cloud SIEM Comparison */}
+        {/* Section 5: Sovereign SIEM vs Cloud SIEM Comparison (Commented Out) */}
+        {/*
         <section id="comparison" className="relative w-full py-24 sm:py-32 px-6 sm:px-12 lg:px-16 border-t border-white/10 overflow-hidden">
-          {/* Ambient Purple Background Glow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[48rem] h-[28rem] bg-purple-600/10 rounded-full blur-[140px] pointer-events-none" />
 
           <div className="max-w-7xl mx-auto relative z-10">
-            {/* Section Header */}
             <div className="max-w-3xl mb-16 text-center mx-auto">
-              <div className="mb-3">
-                <span className="text-xs font-mono uppercase tracking-widest text-purple-400">
-                  <ScrambleText text="Architectural Breakdown" onHover={true} />
-                </span>
-              </div>
               <h2 className="text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-tight">
                 Why Sovereign Air-Gapped SIEM{" "}
                 <span className="bg-gradient-to-r from-purple-200 via-purple-300 to-indigo-200 bg-clip-text text-transparent">
@@ -779,7 +756,6 @@ export default function SiemProductPage() {
               </p>
             </div>
 
-            {/* Comparison Table Container */}
             <div className="rounded-3xl bg-[#14081c]/90 border border-white/10 overflow-hidden shadow-[0_25px_70px_rgba(0,0,0,0.7)] backdrop-blur-xl">
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-sm font-light border-collapse">
@@ -821,7 +797,6 @@ export default function SiemProductPage() {
                         key={idx}
                         className="hover:bg-white/[0.02] transition-colors group"
                       >
-                        {/* Criterion */}
                         <td className="py-5 px-6 sm:px-8">
                           <div>
                             <div className="text-white font-medium text-sm sm:text-base">
@@ -833,7 +808,6 @@ export default function SiemProductPage() {
                           </div>
                         </td>
 
-                        {/* JANUS Column (Elevated) */}
                         <td className="py-5 px-6 sm:px-8 bg-purple-950/25 border-x border-purple-500/25">
                           <div className="flex items-start gap-3">
                             <span className="w-5 h-5 rounded-full bg-purple-500/30 text-purple-200 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 border border-purple-400/40 shadow-[0_0_8px_rgba(168,85,247,0.3)]">
@@ -850,7 +824,6 @@ export default function SiemProductPage() {
                           </div>
                         </td>
 
-                        {/* Legacy SIEM Column */}
                         <td className="py-5 px-6 sm:px-8">
                           <div className="flex items-start gap-3">
                             <span className="w-5 h-5 rounded-full bg-white/5 text-white/40 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 border border-white/10">
@@ -874,29 +847,29 @@ export default function SiemProductPage() {
             </div>
           </div>
         </section>
+        */}
 
         {/* Section 6: Final Call To Action */}
-        <section id="poc" className="w-full py-28 sm:py-36 px-6 sm:px-12 lg:px-16 border-t border-white/10 bg-gradient-to-br from-[#1b1022] via-[#2f1c3e] to-[#1b1022] relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.15)_0,transparent_70%)]" />
+        <section id="poc" className="w-full py-28 sm:py-36 px-6 sm:px-12 lg:px-16 border-t border-white/10 bg-theme-gradient relative overflow-hidden">
+          {/* Subtle Ambient Glow */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-purple-600/10 rounded-full blur-[140px] pointer-events-none" />
 
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <span className="text-xs font-mono uppercase tracking-widest text-purple-300 bg-purple-500/15 px-4 py-1.5 rounded-full border border-purple-500/30">
-              Deploy Air-Gapped Intelligence
+            <span className="font-mono text-xs uppercase tracking-widest text-purple-400 font-bold px-3 py-1 rounded-full bg-purple-900/30 border border-purple-500/30 inline-block mb-6">
+              Evaluation &amp; Deployment
             </span>
-
-            <h2 className="text-4xl sm:text-6xl font-light text-white tracking-tight mt-8 mb-6 leading-tight">
-              Ready to Defend Your Network Without Cloud Exposure?
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-tight">
+              Ready to modernize your SOC with <span className="bg-gradient-to-r from-purple-200 via-purple-300 to-indigo-200 bg-clip-text text-transparent">Enterprise SIEM</span>?
             </h2>
 
-            <p className="text-lg sm:text-xl text-white/70 font-light max-w-2xl mx-auto mb-10 leading-relaxed">
-              Schedule an on-premise Proof-of-Concept demonstration on your hardware. Experience real-time
-              syslog ingestion, Layer 2 switch port correlation, and one-click containment.
+            <p className="text-base sm:text-lg text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+              Experience petabyte-scale streaming analytics, instant compliance posture, and zero per-gigabyte ingestion fees.
             </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="mailto:contact@janus-defense.com?subject=Air-Gapped%20SIEM%20POC%20Request"
-                className="px-9 py-4 rounded-full bg-white text-[#1b1022] font-mono text-xs font-bold uppercase tracking-widest hover:bg-purple-100 transition-all duration-300 shadow-[0_0_35px_rgba(255,255,255,0.4)] hover:scale-105 active:scale-95"
+                href="#overview"
+                className="px-9 py-4 rounded-full bg-white text-janus-bg font-mono text-xs font-bold uppercase tracking-widest hover:bg-purple-100 transition-all duration-300 shadow-[0_0_35px_rgba(255,255,255,0.4)] hover:scale-105 active:scale-95"
               >
                 Schedule Air-Gapped POC →
               </a>
@@ -913,6 +886,5 @@ export default function SiemProductPage() {
         {/* Global Footer */}
         <Footer />
       </div>
-    </SmoothScroll>
   );
 }

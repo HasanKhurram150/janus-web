@@ -122,7 +122,7 @@ export default function TiersSection() {
     <section
       id="tiers"
       ref={sectionRef}
-      className="relative w-full py-28 sm:py-36 px-6 sm:px-10 lg:px-16 bg-[#1b1022] border-b border-white/5 overflow-hidden"
+      className="relative w-full py-28 sm:py-36 px-6 sm:px-10 lg:px-16 bg-janus-bg border-b border-white/5 overflow-hidden"
     >
       <div className="w-full max-w-7xl mx-auto">
         {/* Section Header */}
@@ -145,7 +145,7 @@ export default function TiersSection() {
               onClick={() => setIsAnnual(false)}
               className={`px-5 py-2 rounded-full transition-all duration-300 ${
                 !isAnnual
-                  ? "bg-white text-[#1b1022] font-medium"
+                  ? "bg-white text-janus-bg font-medium"
                   : "text-white/60 hover:text-white"
               }`}
             >
@@ -155,7 +155,7 @@ export default function TiersSection() {
               onClick={() => setIsAnnual(true)}
               className={`px-5 py-2 rounded-full transition-all duration-300 ${
                 isAnnual
-                  ? "bg-white text-[#1b1022] font-medium"
+                  ? "bg-white text-janus-bg font-medium"
                   : "text-white/60 hover:text-white"
               }`}
             >
@@ -240,7 +240,7 @@ export default function TiersSection() {
                     href="#hero"
                     className={`w-full py-3.5 rounded-full font-mono text-xs font-medium tracking-wide transition-all duration-300 flex items-center justify-center ${
                       tier.ctaStyle === "primary"
-                        ? "bg-white text-[#1b1022] hover:bg-white/90 active:scale-98"
+                        ? "bg-white text-janus-bg hover:bg-white/90 active:scale-98"
                         : "bg-white/[0.04] hover:bg-white/[0.08] text-white border border-white/15"
                     }`}
                   >
