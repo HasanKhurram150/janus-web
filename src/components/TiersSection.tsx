@@ -67,6 +67,7 @@ const TIERS = [
     ],
     cta: "Contact team",
     ctaStyle: "outline",
+    ctaHref: "https://www.antilineartech.com/contact",
   },
 ];
 
@@ -237,7 +238,9 @@ export default function TiersSection() {
                 {/* CTA Button */}
                 <div>
                   <a
-                    href="#hero"
+                    href={tier.ctaHref || "#hero"}
+                    target={tier.ctaHref?.startsWith("http") ? "_blank" : undefined}
+                    rel={tier.ctaHref?.startsWith("http") ? "noopener noreferrer" : undefined}
                     className={`w-full py-3.5 rounded-full font-mono text-xs font-medium tracking-wide transition-all duration-300 flex items-center justify-center ${
                       tier.ctaStyle === "primary"
                         ? "bg-white text-janus-bg hover:bg-white/90 active:scale-98"

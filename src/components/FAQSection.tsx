@@ -37,7 +37,12 @@ export default function FAQSection() {
             <h2 className="text-4xl sm:text-5xl font-medium tracking-tight mb-6">FAQs</h2>
             <p className="text-white/70 text-lg leading-relaxed">
               Everything you need to know about the product and billing. Can't find the answer you're looking for? Please{" "}
-              <a href="#" className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors">
+              <a 
+                href="https://www.antilineartech.com/contact" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white underline decoration-white/30 hover:decoration-white underline-offset-4 transition-colors"
+              >
                 chat to our friendly team
               </a>.
             </p>
