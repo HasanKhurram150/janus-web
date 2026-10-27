@@ -21,78 +21,79 @@ const NAC_TABS: TabData[] = [
     title: "Realize authoritative edge enforcement without agent friction or cloud tollgates",
     shortTitle: "Edge Enforcement",
     description:
-      "JANUS NAC delivers deterministic Network Access Control directly at the local access layer. Deployed 100% on-premise on standard Ubuntu Server, JANUS governs access to physical switch ports and wireless segments without external cloud brokers or recurring per-endpoint license taxes. Combining standards-based 802.1X/RADIUS authentication, MAC Authentication Bypass (MAB), and out-of-band SNMP/CLI switch control, JANUS validates device legitimacy before granting access to internal network fabric.",
+      "JANUS NAC delivers deterministic network access control directly at the local access layer. Deployed 100% on-premise, JANUS governs access to physical switch ports and wireless segments without external cloud brokers or recurring per-endpoint license taxes. Every device is validated against your policies before it is granted access to your internal network — locally and instantaneously.",
     bullets: [
-      "On-premise 802.1X/RADIUS authentication with zero cloud phone-home",
-      "Automated MAC Authentication Bypass (MAB) for headless IoT & printers",
-      "Direct SNMP write and CLI switch port control across multi-vendor fabric",
-      "Flat predictable licensing with zero per-endpoint subscription penalties",
+      "Policy-based access control enforced entirely on-premise with zero cloud dependencies",
+      "Automatic enforcement for both managed endpoints and headless devices",
+      "Direct switch-level port control across multi-vendor network infrastructure",
+      "Flat, predictable licensing with zero per-endpoint subscription penalties",
     ],
     metrics: {
       label: "AUTHENTICATION LATENCY",
       value: "< 45ms",
-      sub: "Local RADIUS RFC 2865 engine • Zero WAN dependency",
+      sub: "Local on-premise authentication engine • Zero WAN dependency",
     },
-    codeSnippet: `// JANUS Air-Gapped Port Admission Pipeline
-[Access Switch: CORE-SW-01:Gi1/0/18]
-  ↳ EAP-TLS / 802.1X Handshake Initiated
-  ↳ Local Radius Auth (On-Prem SQLite/LDAP Registry)
-  ↳ Certificate Validation: CN=SEC-WS-088.internal
-  ↳ Dynamic Authorization: Grant VLAN 120 (SCADA_OPS)
-  ✓ Cloud Broker Dependency: 0.00% [Strict Air-Gap Verified]`,
+    codeSnippet: `// JANUS Port Admission — Live Enforcement Status
+[Access Switch: Production Wing — Port 18]
+  ↳ Device Authentication: INITIATED
+  ↳ Policy Lookup: Local on-premise registry
+  ↳ Identity Verification: SEC-WS-088 [AUTHORIZED]
+  ↳ Network Access: Granted to Production Segment
+  ✓ Cloud Broker Dependency: 0.00% [Air-Gap Verified]`,
   },
   {
     id: "profiling",
     title: "Empower admission accuracy with active Layer 2 profiling and port control",
     shortTitle: "Active L2 Profiling",
     description:
-      "Unlike overlay security tools that merely monitor traffic after admission, JANUS controls the physical access layer. By profiling endpoints through DHCP fingerprinting, MAC OUI vendor lookups, and direct Bridge-MIB switch polling, JANUS distinguishes authorized corporate hardware from rogue laptops, unauthorized IoT devices, and unmanaged access points. Unknown or unauthorized devices are automatically restricted at the switch port before they touch core data planes.",
+      "Unlike overlay security tools that monitor traffic after it is already admitted, JANUS controls the physical access layer itself. Every connecting device is profiled and evaluated against your authorized asset inventory before it is permitted to communicate — unknown or unauthorized devices are blocked at the port before they can reach any internal system.",
     bullets: [
-      "DHCP option 55/60 fingerprinting and IEEE OUI hardware vendor lookup",
-      "Real-time RFC 1493 Bridge-MIB polling to bind MAC directly to switch port",
-      "Immediate identification of unmanaged switches and rogue access points",
-      "Automatic port-level restriction before unverified devices reach core routes",
+      "Every connecting device profiled and matched against authorized asset inventory",
+      "Automatic identification of unmanaged switches, rogue devices, and unauthorized access points",
+      "Unauthorized devices blocked at the physical port before reaching core networks",
+      "Zero guesswork — deterministic hardware attribute matching with no false permittance",
     ],
     metrics: {
       label: "PROFILING ACCURACY",
       value: "99.8%",
       sub: "Deterministic hardware attribute matching • Zero guesswork",
     },
-    codeSnippet: `// Dynamic L2 Device Profiling & Hardware Attribution
-Target MAC:      00:1A:2B:3C:4D:5E [Intel Corporate NIC]
-DHCP Options:    Option 55 (1,3,6,15,119,252) -> OS: Ubuntu 24.04 LTS
-Switch Entity:   SW-ACCESS-02 (10.240.0.2)
-Physical Port:   GigabitEthernet 1/0/24 [Access Port]
-Profile Result:  AUTHORIZED_MANAGED_ENDPOINT
-Policy Action:   Assign Production VLAN 120 • 802.1X Authenticated`,
+    codeSnippet: `// JANUS Device Profiling — Admission Decision
+Connecting Device: Unknown Asset
+Physical Location: Access Switch 02 — Port 24
+Device Profile:    AUTHORIZED MANAGED ENDPOINT
+Policy Match:      Production Access Permitted
+Action:            Granted access to Production Network Segment
+✓ Unauthorized Device Attempts Blocked: 0 Through`,
   },
   {
     id: "containment",
     title: "Fuel NOC + SOC convergence with instantaneous hardware containment",
     shortTitle: "NOC + SOC Containment",
     description:
-      "Unify identity admission, IPAM tracking, and SIEM threat correlation into an automated defense feedback loop. When the JANUS SIEM or vulnerability engine flags an active exploit, credential abuse, or rogue MAC anomaly, JANUS NAC moves instantly from detection to isolation—reassigning the endpoint to a restricted quarantine VLAN or administratively shutting down the physical switch port in real time.",
+      "Unify identity admission, network inventory, and security threat response into an automated defense loop. When JANUS detects an active threat, credential abuse, or unauthorized device, it moves instantly from detection to isolation — removing the compromised asset from the network at the hardware level before lateral spread can occur.",
     bullets: [
-      "Automated feedback loop between SIEM threat alerts and NAC port control",
-      "Sub-2-second dynamic VLAN isolation into remediation quarantine",
-      "One-click hardware port shutdown from security triage console",
-      "Maintains analyst remote triage access while eliminating lateral spread",
+      "Automated feedback loop between threat detection and access control enforcement",
+      "Sub-2-second device isolation into quarantine upon threat confirmation",
+      "One-click hardware port shutdown directly from the security console",
+      "Analyst remote triage access maintained while all lateral movement is blocked",
     ],
     metrics: {
       label: "CONTAINMENT LATENCY",
       value: "< 1.4s",
-      sub: "Direct RADIUS CoA (RFC 3576) & SNMP Set port execution",
+      sub: "Direct hardware-level port control • No cloud intermediary",
     },
-    codeSnippet: `// Converged SIEM-to-NAC Automated Hardware Containment
-Event Trigger:   SIEM Alert #JAN-9842 (Ransomware Lateral Sweep)
-Target IP:       10.240.14.88 | MAC: 00:1A:2B:3C:4D:5E
-Switch Location: CORE-SW-01:Gi1/0/24
-[Step 1] Send RADIUS CoA (RFC 3576) Disconnect-Request
-[Step 2] Reassign Port to VLAN 999 (ISOLATION_QUARANTINE)
-[Step 3] Apply Ingress Filter: Deny All Internal Subnet Transit
-Result: Host quarantined at hardware layer in 1.32s (Air-Gapped Sovereign Defense)`,
+    codeSnippet: `// Converged Threat-to-Containment Automated Response
+Event:           Ransomware Lateral Sweep Detected
+Affected Asset:  PROD-WS-14 (Production Segment)
+Physical Port:   Core Switch — Port 24
+[Step 1] Network access revoked at hardware level
+[Step 2] Device moved to isolated quarantine segment
+[Step 3] All internal traffic blocked for affected port
+Result:          Device fully contained in 1.32s [Air-Gapped]`,
   },
 ];
+
 
 const NAC_PILLARS = [
   {

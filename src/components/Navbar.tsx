@@ -9,9 +9,15 @@ import { ChevronDown, ArrowRight } from "lucide-react";
 const CAPABILITIES_LIST = [
   {
     id: "siem",
-    name: "SIEM & SOAR",
-    desc: "Centralized log indexing, telemetry & automated threat killing",
+    name: "SIEM",
+    desc: "Centralized log indexing, sovereign telemetry & threat detection",
     href: "/services/siem",
+  },
+  {
+    id: "soar",
+    name: "SOAR",
+    desc: "Autonomous playbooks, hardware-level isolation & instant containment",
+    href: "/services/soar",
   },
   {
     id: "network-monitor",
@@ -22,7 +28,7 @@ const CAPABILITIES_LIST = [
   {
     id: "endpoint-security",
     name: "Endpoint Security",
-    desc: "Fleet health, background process tracking & USB defense",
+    desc: "Fleet inventory, process tracking, USB defense & folder monitoring",
     href: "/services/endpoint-security",
   },
   {
@@ -155,6 +161,7 @@ export default function Navbar() {
             alt="JANUS Logo"
             width={40}
             height={40}
+            priority
             className="h-10 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
           />
           <span className="font-medium text-sm tracking-tight text-white leading-none">

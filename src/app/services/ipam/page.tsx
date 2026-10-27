@@ -21,76 +21,76 @@ const IPAM_TABS: TabData[] = [
     title: "Realize deterministic IP inventory without spreadsheets or blind spots",
     shortTitle: "Deterministic Inventory",
     description:
-      "JANUS IPAM delivers an automated, single source of truth for your physical and edge address space. Deployed 100% on-premise on standard Ubuntu Server, JANUS continuously discovers, tracks, and reconciles IPv4 and IPv6 assets across your subnets using native ICMP probing, ARP table inspection, and SNMP sweeps. Operating with zero phone-home telemetry and a flat licensing structure, it eliminates the per-IP licensing penalties and cloud-sync requirements of conventional IP management tools.",
+      "JANUS IPAM gives network teams a continuously accurate, single source of truth for every IP address across your entire estate — all processed and retained within your private network. With no cloud dependency and no per-IP licensing, teams can track every asset, flag dead reservations, and eliminate spreadsheet drift without cost or sovereignty risk.",
     bullets: [
-      "Continuous scheduled ICMP sweeps and gateway ARP table ingestion",
-      "Native IPv4/IPv6 dual-stack support across physical and virtual subnets",
-      "Strictly air-gapped discovery with zero phone-home telemetry",
-      "Flat predictable licensing with zero per-IP consumption tax",
+      "Continuous automated discovery across all subnets — no manual sweeps required",
+      "Full IPv4 and IPv6 dual-stack coverage across physical and virtual environments",
+      "All discovery and data retained exclusively within your private network boundary",
+      "Flat, predictable licensing — track every host without per-IP cost penalties",
     ],
     metrics: {
       label: "DISCOVERY THROUGHPUT",
       value: "65,000+ IPs / min",
-      sub: "Parallel asynchronous ICMP/ARP engine • Zero packet drop",
+      sub: "High-speed parallel discovery • Zero packet drop",
     },
-    codeSnippet: `// JANUS Air-Gapped Subnet Discovery Pipeline
-[Target Subnet: 10.240.0.0/16 (65,534 Total Addresses)]
-  ↳ Parallel Multi-Threaded ICMP Echo Sweep
-  ↳ Gateway ARP Cache Extraction (Cisco / Juniper / Arista)
-  ↳ Subnet Utilization Calculation: 84.2% Allocated (55,180 Active)
-  ↳ Stale Reservation Pruning: 142 Stale IPs Flagged for Reclaim
-  ✓ Telemetry Egress Leak: 0.00% [Strict Air-Gap Verified]`,
+    codeSnippet: `// JANUS Sovereign IP Discovery — Live Status
+[Target: 10.240.0.0/16 (65,534 Addresses)]
+  ↳ Active Host Discovery: RUNNING
+  ↳ Stale Reservation Detection: 142 Flagged
+  ↳ Subnet Utilization: 84.2% Allocated (55,180 Active)
+  ↳ Air-Gapped Storage: ALL DATA LOCAL
+  ✓ External Telemetry Exposure: 0.00% [Sovereignty Verified]`,
   },
   {
     id: "mapping",
     title: "Empower operational accuracy with physical Layer 2 port mapping",
     shortTitle: "Physical L2 Port Mapping",
     description:
-      "Unlike standalone IPAM databases that only track IP addresses in static tables, JANUS natively correlates logical subnets with your physical network infrastructure. Every active IP is automatically bound to its hardware MAC address, associated VLAN, and physical switch and port interface via standard SNMP/Bridge-MIB polling. Network teams gain instant physical visibility into where every device is connected without manual switch querying.",
+      "Unlike standalone IP databases that only track addresses in static tables, JANUS connects every IP to the physical device and network port it is connected to. Network teams can instantly see exactly where any device is physically located and connected — without querying switches manually during outages, audits, or incident response.",
     bullets: [
-      "Instant MAC-to-Switch-Port physical binding (e.g. CORE-SW-01 / Gi1/0/24)",
-      "Automated RFC 1493 Bridge-MIB and Q-BRIDGE-MIB polling engine",
-      "Real-time VLAN tagging and 802.1Q trunk interface correlation",
-      "Eliminates manual CLI switch querying during outages, moves, and audits",
+      "Every IP address bound to its exact physical device location and network port",
+      "Automatic VLAN and network segment correlation for every active asset",
+      "Eliminate manual switch querying during outages, moves, and security audits",
+      "Instant physical attribution for any IP with zero human intervention",
     ],
     metrics: {
       label: "PHYSICAL PINPOINT SPEED",
       value: "< 1.2s",
-      sub: "Direct hardware port attribution from IP to physical copper/fiber",
+      sub: "Direct hardware port attribution from IP to physical connection",
     },
-    codeSnippet: `// Dynamic L2 Entity Attribution & Bridge-MIB Graph
+    codeSnippet: `// Dynamic Physical Location Attribution
 Target IP:       10.240.14.88
-MAC Address:     00:1A:2B:3C:4D:5E [Intel Embedded NIC]
-VLAN ID:         120 [CRITICAL_SCADA_OPS]
-Switch Entity:   CORE-SW-DIST-01 (10.240.0.1)
-Physical Port:   GigabitEthernet 1/0/24 [UP / 1000Mbps Full]
-Hardware State:  L2 Link Stable • Zero Topology Drift Verified`,
+Asset Name:      SCADA-PLC-04
+Network Segment: Critical Operations (VLAN 120)
+Switch:          Distribution Switch 01
+Physical Port:   Port 24 [ACTIVE / 1Gbps]
+Location Status: Verified — Zero Topology Drift`,
   },
   {
     id: "convergence",
     title: "Fuel NOC + SOC convergence within a single architecture",
     shortTitle: "NOC + SOC Convergence",
     description:
-      "Break the operational barrier between network administration and threat response. Because JANUS unifies IPAM, switch port tracking, and SIEM event correlation under one engine, an IP address conflict, rogue device alert, or security event immediately provides both the network administrator and the security analyst with actionable, hardware-level attribution.",
+      "Break the operational barrier between network administration and security response. Because JANUS unifies IP inventory, physical port tracking, and security event correlation under one platform, any network anomaly or security incident immediately gives both network and security teams the hardware-level context they need to act.",
     bullets: [
-      "Unified operational pane for network administrators and security analysts",
-      "Instant Layer 2 hardware port isolation for rogue or misbehaving devices",
-      "Seamless correlation of SIEM alerts with historical IPAM host timelines",
-      "Zero swivel-chair latency between anomaly discovery and network remediation",
+      "Unified single dashboard for network administrators and security analysts",
+      "Instant hardware-level device isolation for rogue or misbehaving assets",
+      "Security alerts automatically enriched with full IP history and physical location",
+      "Zero latency between anomaly discovery and network-level remediation",
     ],
     metrics: {
       label: "MEAN TIME TO REMEDIATION",
       value: "< 1.8s",
-      sub: "Direct hardware port shutdown without third-party cloud brokers",
+      sub: "Direct hardware-level device isolation without external dependencies",
     },
-    codeSnippet: `// Converged NOC + SOC Instant Hardware Containment
-Event Trigger:   Rogue Hardware / Duplicate IP Conflict
-Offending IP:    10.240.14.89 [Claiming Gateway 10.240.14.1]
-Physical Port:   CORE-SW-DIST-01:Gi1/0/25 [Access Port]
-[Step 1] Send SNMP Set / SSH Command: "shutdown interface Gi1/0/25"
-[Step 2] Quarantine MAC: 48:D7:05:99:A1:02 in 802.1X NAC Table
-[Step 3] Broadcast Incident Notification to Converged Operations Room
-Result: Host isolated at Layer 2 in 1.48s (Zero Packet Egress)`,
+    codeSnippet: `// Converged NOC + SOC — Automated Hardware Containment
+Event:           Rogue Device / IP Conflict Detected
+Offending Asset: Unknown Device (10.240.14.89)
+Physical Port:   Distribution Switch 01 — Port 25
+[Step 1] Network access revoked at hardware level
+[Step 2] Asset quarantined in identity management
+[Step 3] Operations Room notified immediately
+Result:          Device isolated in 1.48s — Zero further exposure`,
   },
 ];
 

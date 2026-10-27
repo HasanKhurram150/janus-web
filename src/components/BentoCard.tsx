@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import ScrambleText from "./ScrambleText";
 
 interface BentoCardProps {
@@ -12,6 +13,7 @@ interface BentoCardProps {
   centerEmblem?: React.ReactNode;
   className?: string;
   imageFit?: "cover" | "contain";
+  href?: string;
 }
 
 export default function BentoCard({
@@ -22,10 +24,11 @@ export default function BentoCard({
   centerEmblem,
   className = "",
   imageFit = "cover",
+  href,
 }: BentoCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
-  return (
+  const cardContent = (
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -82,4 +85,14 @@ export default function BentoCard({
       </div>
     </div>
   );
+
+  if (href) {
+    return (
+      <Link href={href} className="block w-full">
+        {cardContent}
+      </Link>
+    );
+  }
+
+  return cardContent;
 }

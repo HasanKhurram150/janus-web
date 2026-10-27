@@ -28,20 +28,31 @@ export default function HeroSection() {
           { x: 0, y: 0, opacity: 0.04, duration: 1.8, ease: "power4.out" },
           0
         )
-        // Animate main content
-        .fromTo(
-          contentRef.current?.children || [],
+      // Animate main content
+      const contentElements = contentRef.current
+        ? Array.from(contentRef.current.children)
+        : [];
+      if (contentElements.length > 0) {
+        tl.fromTo(
+          contentElements,
           { opacity: 0, y: 30 },
           { opacity: 1, y: 0, duration: 1, stagger: 0.15 },
-          0.2 // Start at 0.2s absolutely on timeline instead of waiting for logo
-        )
-        // Animate decorative elements
-        .fromTo(
-          decorRef.current?.children || [],
+          0.2
+        );
+      }
+
+      // Animate decorative elements
+      const decorElements = decorRef.current
+        ? Array.from(decorRef.current.children)
+        : [];
+      if (decorElements.length > 0) {
+        tl.fromTo(
+          decorElements,
           { opacity: 0 },
           { opacity: 1, duration: 1, stagger: 0.1 },
           "-=0.8"
         );
+      }
     }, containerRef);
 
     return () => ctx.revert();

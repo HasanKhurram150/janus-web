@@ -14,33 +14,33 @@ export default function SiemDeepDive({ onClose }: SiemDeepDiveProps) {
   const pillars = [
     {
       id: "visibility",
-      badge: "DATA INGESTION // SCALE",
+      badge: "FULL-SPECTRUM TELEMETRY",
       title: "Realize comprehensive visibility",
       shortTitle: "Comprehensive Visibility",
       description:
-        "JANUS SIEM delivers total operational visibility by ingesting, parsing, and indexing high-throughput telemetry across your physical and digital estate. Deployed fully on-premise on standard Ubuntu Server, JANUS handles RFC 3164/5424 syslog, SNMP polling, and bidirectional flow data with zero phone-home telemetry. With flat licensing and no EPS or GB-per-day penalties, security teams can ingest high-verbosity logs from every router, firewall, switch port, and endpoint without calculating consumption costs.",
+        "JANUS SIEM gives security teams total operational visibility across every device, network segment, and endpoint in your estate — all retained exclusively within your private perimeter. With no cloud dependency and no volume-based licensing, teams can capture high-fidelity event data from every asset without cost anxiety or data sovereignty risk.",
       highlights: [
-        { label: "Phone-Home Telemetry", val: "0% / None" },
-        { label: "Licensing Penalty", val: "Zero EPS Tax" },
+        { label: "External Data Exposure", val: "0% / None" },
+        { label: "Volume Penalty", val: "None" },
         { label: "Deployment", val: "100% On-Premise" },
-        { label: "Standard Ingest", val: "RFC 3164 / 5424" },
+        { label: "Coverage", val: "Every Asset, Every Event" },
       ],
       metricLabel: "LIVE INGESTION RATE",
       metricValue: "142,850 EPS",
-      metricSub: "Zero drop rate • Bidirectional flow parsing",
+      metricSub: "Zero drop rate • Continuous real-time collection",
     },
     {
       id: "detection",
-      badge: "L2/L3 TOPOLOGY CORRELATION",
+      badge: "PHYSICAL CONTEXT CORRELATION",
       title: "Empower accurate detection with physical and network context",
       shortTitle: "Accurate Detection & Context",
       description:
-        "Unlike disconnected SIEMs that treat alerts as isolated text strings, JANUS bridges log analysis directly with native Layer 2 switch polling and IPAM. An alert does not just reveal an IP—it pinpoints the host's MAC address, VLAN, and physical switch port. By combining deterministic threat heuristics with real-time entity tracking, JANUS surfaces actionable incidents while suppressing noise.",
+        "Unlike conventional SIEMs that treat alerts as isolated events, JANUS links every security alert directly to the physical infrastructure it originated from. An alert doesn't just show an IP — it tells you exactly which device, network segment, and physical location is involved. This eliminates alert fatigue and lets analysts act immediately with full situational awareness.",
       highlights: [
-        { label: "Correlation Scope", val: "Layer 2 - Layer 7" },
-        { label: "Physical Pinpoint", val: "Switch Port Level" },
-        { label: "Noise Suppression", val: "> 90% Heuristic" },
-        { label: "Entity Linkage", val: "MAC + IPAM + VLAN" },
+        { label: "Alert Enrichment", val: "Physical + Logical" },
+        { label: "Attribution Scope", val: "Device to Network" },
+        { label: "Noise Suppression", val: "> 90% Reduction" },
+        { label: "Asset Context", val: "Identity + History" },
       ],
       metricLabel: "ALERT NOISE SUPPRESSED",
       metricValue: "92.4%",
@@ -52,27 +52,27 @@ export default function SiemDeepDive({ onClose }: SiemDeepDiveProps) {
       title: "Fuel operational efficiency with converged NOC + SOC defense",
       shortTitle: "Converged Operational Efficiency",
       description:
-        "Unify syslog collection, flow monitoring, behavioral analytics, and incident containment within a single, self-contained architecture. Move instantly from detection to remediation through integrated SOAR capabilities, cutting out the friction of toggling between disconnected monitoring consoles.",
+        "Unify network health monitoring and security operations in a single platform. JANUS eliminates the operational friction of switching between tools — your NOC and SOC teams share one real-time view, and automated response playbooks execute containment actions the moment a threat is confirmed.",
       highlights: [
-        { label: "Console Friction", val: "Zero Swivel" },
-        { label: "Mitigation Speed", val: "< 2.4s Automated" },
-        { label: "Containment Scope", val: "Hardware Port Lock" },
-        { label: "Architecture", val: "Converged NOC+SOC" },
+        { label: "Tool Switching", val: "Zero" },
+        { label: "Containment Speed", val: "< 2.4s Automated" },
+        { label: "Isolation Scope", val: "Hardware Level" },
+        { label: "Operations Model", val: "Converged NOC+SOC" },
       ],
       metricLabel: "MEAN TIME TO REMEDIATION",
       metricValue: "< 2.4s",
-      metricSub: "Integrated SOAR automated containment without console switching",
+      metricSub: "Automated containment without console switching",
     },
   ];
 
   const analyticsCapabilities = [
     {
       id: "det-1",
-      tag: "MITRE ATT&CK // RULES",
-      title: "Use deterministic, framework-aligned detections",
+      tag: "PRECISE DETECTION",
+      title: "Detect threats with precision, not guesswork",
       description:
-        "JANUS correlates incoming syslog and network telemetry against dynamic signature rulebases and deterministic heuristics mapped systematically to the MITRE ATT&CK framework. Detect brute-force credential attacks, abnormal administrative sessions (RDP/SSH), rogue Layer 2 changes, and volumetric DoS spikes with zero reliance on opaque, resource-heavy machine-learning nodes.",
-      bullets: ["Dynamic signature rulebases", "Mapped to MITRE ATT&CK", "Zero opaque black-box AI"],
+        "JANUS identifies threats through deterministic, industry-standard detection logic — not opaque black-box models. Every alert is grounded in established attack patterns, giving analysts confident, actionable findings and eliminating the noise of unpredictable heuristic systems.",
+      bullets: ["Industry-standard detection logic", "Grounded in established attack frameworks", "No opaque black-box models"],
       icon: (
         <svg className="w-5 h-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -120,11 +120,11 @@ export default function SiemDeepDive({ onClose }: SiemDeepDiveProps) {
     },
     {
       id: "det-5",
-      tag: "HARDWARE-LAYER SOAR",
-      title: "Execute direct, immediate containment",
+      tag: "INSTANT RESPONSE",
+      title: "Contain threats directly, without delay",
       description:
-        "Eliminate delay between triage and response. Trigger one-click containment actions directly from the platform—initiating firewall IP quarantines or tracing the physical port for immediate Layer 2 network isolation. JANUS ensures that incident response is executed directly at the hardware layer, right where your network lives.",
-      bullets: ["One-click IP quarantine", "Layer 2 hardware port isolation", "Zero cloud lag execution"],
+        "Response is built into the platform. Once a threat is confirmed, containment actions execute immediately at the infrastructure level — isolating the affected device, cutting off network access, and notifying the response team. No manual steps, no tool switching, no wasted time.",
+      bullets: ["One-click threat containment", "Hardware-level device isolation", "Automated team notification"],
       icon: (
         <svg className="w-5 h-5 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -167,7 +167,7 @@ export default function SiemDeepDive({ onClose }: SiemDeepDiveProps) {
           </span>
         </h2>
         <div className="flex flex-wrap gap-2.5 pt-2">
-          {["Ubuntu Server Native", "0 EPS Taxes", "Layer 2 Mapping", "Airgapped Compliance", "Sub-second SOAR"].map(
+          {["100% On-Premise", "Zero Volume Penalties", "Physical Asset Attribution", "Air-Gapped Compliance", "Sub-second Response"].map(
             (badge, idx) => (
               <span
                 key={idx}

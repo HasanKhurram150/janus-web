@@ -20,55 +20,55 @@ interface TabData {
 const SEC_OPS_TABS: TabData[] = [
   {
     id: "visibility",
-    badge: "DATA INGESTION & SCALE",
+    badge: "FULL-SPECTRUM TELEMETRY",
     title: "Realize comprehensive visibility",
-    shortTitle: "Comprehensive Ingestion",
+    shortTitle: "Comprehensive Visibility",
     description:
-      "JANUS SIEM delivers total operational visibility by ingesting, parsing, and indexing high-throughput telemetry across your physical and digital estate. Deployed fully on-premise on standard Ubuntu Server, JANUS handles RFC 3164/5424 syslog, SNMP polling, and bidirectional flow data with zero phone-home telemetry. With flat licensing and no EPS or GB-per-day penalties, security teams can ingest high-verbosity logs from every router, firewall, switch port, and endpoint without calculating consumption costs.",
+      "JANUS SIEM gives security teams total operational visibility across every device, network segment, and endpoint in your estate — all retained exclusively within your private perimeter. With no cloud dependency and no volume-based licensing, teams can capture high-fidelity event data from every asset without cost anxiety or data sovereignty risk.",
     bullets: [
-      "RFC 3164 and RFC 5424 syslog listener with multi-threaded parser",
-      "Native SNMP v2c/v3 polling and asynchronous trap collector",
-      "Zero phone-home telemetry — strictly air-gapped data retention",
-      "Flat predictable licensing with zero EPS or GB/day volume penalties",
+      "Continuous event collection from every router, firewall, switch, and endpoint",
+      "All telemetry stored and processed entirely within your private network boundary",
+      "No data ever leaves your perimeter — complete sovereignty over security data",
+      "Flat, predictable licensing — scale coverage without financial penalties",
     ],
     metrics: {
       label: "PEAK INGESTION CAPACITY",
       value: "150,000+ EPS",
-      sub: "Zero packet loss • Local NVMe indexed ring buffer",
+      sub: "Zero drop rate • Local indexed storage",
     },
-    codeSnippet: `// JANUS Air-Gapped Ingestion Pipeline
-[Syslog Listener: UDP/514, TCP/6514 TLS]
-  ↳ Multi-Threaded RFC 5424 Deserializer
-  ↳ Local Geo/Entity Parser (Offline MaxMind DB)
-  ↳ Zero-Egress In-Memory Ring Buffer
-  ↳ NVMe Columnar Indexer (AES-256 GCM at rest)
-  ✓ Cloud Telemetry Leak: 0.00% [Strict Air-Gap Verified]`,
+    codeSnippet: `// JANUS Sovereign Visibility — Live Ingestion Status
+[Event Sources: All Routers, Firewalls, Switches, Endpoints]
+  ↳ Continuous Real-Time Collection: ACTIVE
+  ↳ Local Entity Enrichment: ACTIVE
+  ↳ Air-Gapped Storage: ACTIVE
+  ↳ Encrypted At-Rest Retention: ACTIVE
+  ✓ External Data Exposure: 0.00% [Sovereignty Verified]`,
   },
   {
     id: "detection",
-    badge: "L2/L3 TOPOLOGY CORRELATION",
+    badge: "PHYSICAL CONTEXT CORRELATION",
     title: "Empower accurate detection with physical and network context",
-    shortTitle: "L2 Context Correlation",
+    shortTitle: "Accurate Detection & Context",
     description:
-      "Unlike disconnected SIEMs that treat alerts as isolated text strings, JANUS bridges log analysis directly with native Layer 2 switch polling and IPAM. An alert does not just reveal an IP—it pinpoints the host's MAC address, VLAN, and physical switch port. By combining deterministic threat heuristics with real-time entity tracking, JANUS surfaces actionable incidents while suppressing noise.",
+      "Unlike conventional SIEMs that treat alerts as isolated events, JANUS links every security alert directly to the physical infrastructure it originated from. An alert doesn't just show an IP — it tells you exactly which device, network segment, and physical location is involved. This eliminates alert fatigue and enables analysts to act immediately with full situational awareness.",
     bullets: [
-      "Instant MAC-to-Switch-Port physical pinpointing (e.g. SW-CORE-01 / Gi1/0/24)",
-      "Automated IPAM entity binding across dynamic DHCP and static subnets",
-      "Deterministic heuristics mapped to MITRE ATT&CK enterprise matrix",
-      "> 92.4% alert noise reduction via physical infrastructure contextualization",
+      "Every alert enriched with physical device location and network segment context",
+      "Automatic binding of security events to asset identity and network history",
+      "Deterministic threat detection aligned to industry-standard attack frameworks",
+      "Over 92% reduction in alert noise through infrastructure-aware correlation",
     ],
     metrics: {
       label: "FALSE POSITIVE REDUCTION",
       value: "92.4%",
       sub: "Physical topology context filters unverified network alerts",
     },
-    codeSnippet: `// Host Entity Resolution & Physical Pinpoint
-Target IP:      10.240.14.88
-MAC Address:    00:1A:2B:3C:4D:5E [Intel NIC]
-VLAN ID:        120 [CRITICAL_SCADA_OPS]
-Switch ID:      CORE-SW-DIST-01 (10.240.0.1)
-Physical Port:  GigabitEthernet 1/0/24 [TRUNKED]
-Threat Score:   CRITICAL (Score: 94) - Rogue DHCP ACK & ARP Poisoning`,
+    codeSnippet: `// Host Entity Resolution — Full Physical Context
+Event:          Unauthorized Access Attempt Detected
+Affected Host:  SCADA-PLC-04
+Network:        Critical Operations Segment (VLAN 120)
+Physical Link:  Distribution Switch — Port 24
+Asset Owner:    Operations Engineering Team
+Threat Level:   CRITICAL — Immediate Containment Advised`,
   },
   {
     id: "efficiency",
@@ -76,63 +76,64 @@ Threat Score:   CRITICAL (Score: 94) - Rogue DHCP ACK & ARP Poisoning`,
     title: "Fuel operational efficiency with converged NOC + SOC defense",
     shortTitle: "Converged NOC+SOC Defense",
     description:
-      "Unify syslog collection, flow monitoring, behavioral analytics, and incident containment within a single, self-contained architecture. Move instantly from detection to remediation through integrated SOAR capabilities, cutting out the friction of toggling between disconnected monitoring consoles.",
+      "Unify network health monitoring and security operations in a single platform. JANUS eliminates the operational friction of switching between tools — your NOC and SOC teams share one real-time view, and automated response playbooks execute containment actions the moment a threat is confirmed.",
     bullets: [
-      "Unified operational telemetry: Network health + Security events in one screen",
-      "Integrated SOAR playbooks for instant Layer 2 hardware port isolation",
-      "Automated firewall ACL generation and temporary IP quarantine",
-      "Zero swivel-chair latency between detection, triage, and mitigation",
+      "Network health and security events unified in a single operational dashboard",
+      "Automated containment playbooks execute instantly on confirmed threats",
+      "Hardware-level device isolation without manual intervention",
+      "Zero tool-switching latency between detection, triage, and remediation",
     ],
     metrics: {
       label: "MEAN TIME TO REMEDIATION",
       value: "< 2.4s",
-      sub: "Direct hardware port shutdown without third-party cloud brokers",
+      sub: "Automated containment executed at the hardware layer",
     },
-    codeSnippet: `// Automated Hardware-Layer Containment Playbook
-Trigger: Incident #JAN-9812 (Active Lateral Movement Detected)
-[Step 1] Verify physical port: CORE-SW-DIST-01:Gi1/0/24
-[Step 2] Send SNMP Set / SSH Command: "shutdown interface Gi1/0/24"
-[Step 3] Apply Firewall ACL: "deny ip host 10.240.14.88 any"
-[Step 4] Broadcast Incident Notification to SOC Duty Channel
-Result: Host fully isolated at Layer 2 in 1.84s (Zero Packet Egress)`,
+    codeSnippet: `// Automated Threat Containment — Live Execution
+Trigger:        Active Lateral Movement Confirmed
+Affected Asset: SCADA-PLC-04 (Critical Operations Segment)
+[Step 1] Physical device location identified
+[Step 2] Network access revoked at hardware level
+[Step 3] IP-level traffic quarantine applied
+[Step 4] SOC Duty Team notified via operations channel
+Result:         Asset fully isolated in 1.84s — Zero further exposure`,
   },
 ];
 
 const DETECTION_PILLARS = [
   {
-    title: "Use deterministic, framework-aligned detections",
+    title: "Detect threats with precision, not guesswork",
     description:
-      "JANUS correlates incoming syslog and network telemetry against dynamic signature rulebases and deterministic heuristics mapped systematically to the MITRE ATT&CK framework. Detect brute-force credential attacks, abnormal administrative sessions (RDP/SSH), rogue Layer 2 changes, and volumetric DoS spikes with zero reliance on opaque, resource-heavy machine-learning nodes.",
-    highlight: "MITRE ATT&CK Heuristics",
-    badge: "FRAMEWORK HEURISTICS",
+      "JANUS identifies threats through deterministic, industry-standard detection logic — not opaque black-box models. Every alert is grounded in established attack patterns, giving analysts confident, actionable findings and eliminating the noise of unpredictable heuristic systems.",
+    highlight: "Industry-Standard Detection",
+    badge: "PRECISE DETECTION",
   },
   {
-    title: "Bridge detection engineering directly to physical infrastructure",
+    title: "Know exactly where every threat is, physically",
     description:
-      "Track adversarial techniques (TTPs) across both network traffic and physical access boundaries. Correlate host activity with network topology to identify lateral movement, unapproved listening ports, or rogue hardware insertions before threats expand across subnets.",
-    highlight: "MITRE ATT&CK L2/L3 Correlation",
-    badge: "TOPOLOGY INTELLIGENCE",
+      "JANUS doesn't just show you an IP address — it tells you exactly which physical device, network segment, and location is involved. Security teams can pinpoint threats within their real infrastructure and act with complete situational awareness instead of hunting through disconnected records.",
+    highlight: "Full Physical Attribution",
+    badge: "PHYSICAL AWARENESS",
   },
   {
-    title: "Harness unified entity aggregation and rapid triage",
+    title: "Eliminate alert fatigue with unified event context",
     description:
-      "Automatically consolidate related operational anomalies, flow spikes, and security events around specific network entities. An analyst can review a consolidated incident profile—linking the timeline of events, bidirectional traffic volume, and endpoint process triggers—in a single view to eliminate alert fatigue.",
-    highlight: "Single-Pane Entity Profile",
+      "Related events, anomalies, and network activity are automatically consolidated around the assets they affect. Analysts see a complete, unified incident profile — linking event history, network activity, and device context in a single view — so every investigation starts with answers, not questions.",
+    highlight: "Unified Incident View",
     badge: "ZERO ALERT FATIGUE",
   },
   {
-    title: "Prioritize focus with root-cause attribution",
+    title: "Understand the root cause immediately",
     description:
-      "Instead of overwhelming analysts with hundreds of disconnected interface or authentication alerts, JANUS ties multi-source events back to the responsible IP and switch interface. Teams immediately identify whether an alert stems from an operational misconfiguration, an internal exfiltration attempt, or an external exploit.",
-    highlight: "Root-Cause Attribution Engine",
-    badge: "ROOT-CAUSE ATTRIBUTION",
+      "Instead of sifting through hundreds of disconnected alerts, JANUS connects all related signals back to the responsible asset and incident origin. Teams instantly know whether they are dealing with a misconfiguration, an insider threat, or an active external attack — and can prioritize accordingly.",
+    highlight: "Root-Cause Attribution",
+    badge: "INSTANT CLARITY",
   },
   {
-    title: "Execute direct, immediate containment",
+    title: "Contain threats directly, without delay",
     description:
-      "Eliminate delay between triage and response. Trigger one-click containment actions directly from the platform—initiating firewall IP quarantines or tracing the physical port for immediate Layer 2 network isolation. JANUS ensures that incident response is executed directly at the hardware layer, right where your network lives.",
-    highlight: "Sub-2.5s Port Shutdown",
-    badge: "HARDWARE-LAYER SOAR",
+      "Response is built into the platform. Once a threat is confirmed, containment actions execute immediately at the infrastructure level — isolating the affected device, cutting off network access, and notifying the response team. No manual steps, no tool switching, no wasted time.",
+    highlight: "Sub-2.5s Containment",
+    badge: "INSTANT RESPONSE",
   },
 ];
 

@@ -21,82 +21,80 @@ const K8S_TABS: TabData[] = [
     title: "Realize full cluster visibility without cloud data taxes or telemetry sprawl",
     shortTitle: "Cluster Observability",
     description:
-      "JANUS Kubernetes Monitoring delivers comprehensive, on-premise observability across your container workloads, control planes, and node infrastructure. Deployed 100% within your private boundary on standard Ubuntu Server, JANUS continuously collects pod metrics, node health, cluster events, and container resource utilization without streaming sensitive workload metadata or logs to multi-tenant cloud platforms. With a flat licensing model, platform teams can monitor expanding microservices, dynamic namespaces, and ephemeral pods without per-node, per-core, or per-metric billing penalties.",
+      "JANUS Kubernetes Monitoring delivers comprehensive, on-premise observability across all container workloads, control planes, and node infrastructure — all retained exclusively within your private boundary. With flat, predictable licensing, platform teams can monitor expanding microservices, dynamic workloads, and ephemeral pods without per-node, per-core, or per-metric billing penalties.",
     bullets: [
-      "100% on-premise telemetry retention with zero external SaaS egress or phone-home telemetry",
-      "Continuous ingestion of kubelet metrics, cAdvisor data, and Kubernetes event streams",
-      "Flat predictable licensing eliminating per-node, per-core, and per-custom-metric surcharges",
-      "Seamless support across vanilla upstream K8s, OpenShift, RKE2, k3s, and air-gapped enclaves",
+      "Complete visibility across all pods, nodes, namespaces, and container workloads",
+      "All cluster telemetry retained entirely within your private network — no SaaS egress",
+      "Flat, predictable licensing — scale monitoring without per-node cost penalties",
+      "Seamless coverage across diverse Kubernetes distributions and air-gapped enclaves",
     ],
     metrics: {
       label: "TELEMETRY EGRESS TAX",
       value: "$0.00",
-      sub: "Zero per-metric or ingestion surcharges • 100% local database storage",
+      sub: "Zero per-metric or ingestion surcharges • 100% local storage",
     },
-    codeSnippet: `// JANUS Air-Gapped Kubernetes Telemetry Pipeline
-[Cluster: PROD-K8S-CORE | Distribution: v1.29.2-upstream]
-  ↳ Telemetry Channel: Local Mutual TLS (Internal Cluster CA)
-  ↳ Node Exporter & cAdvisor: 24 Worker Nodes Ingested
-  ↳ Cloud Telemetry Phone-Home: BLOCKED [0.00 KB/s Egress]
-  ↳ Pod State Engine: 480 Active Pods Across 14 Namespaces
-  ↳ Total Metric License Penalties: $0.00 [Flat Enterprise Model]
-  ✓ Cluster Telemetry Pipeline Active [Air-Gap Verified]`,
+    codeSnippet: `// JANUS Kubernetes Observability — Live Status
+[Cluster: PROD-K8S-CORE | Status: ACTIVE]
+  ↳ Node Monitoring: 24 Worker Nodes Active
+  ↳ Pod Coverage: 480 Active Pods / 14 Namespaces
+  ↳ Air-Gapped Storage: ALL DATA LOCAL
+  ↳ External Telemetry Exposure: 0.00 KB/s
+  ✓ Full Cluster Visibility [Sovereignty Verified]`,
   },
   {
     id: "context",
     title: "Empower operational accuracy with converged physical and cluster context",
     shortTitle: "Converged Physical Context",
     description:
-      "Unlike standalone container monitors that view Kubernetes as an isolated virtual abstraction, JANUS bridges dynamic container telemetry directly with your underlying physical compute and network fabric. Every cluster node, daemonset, and ingress route is mapped to its underlying host OS, physical IPAM allocation, and top-of-rack switch port. Platform engineers and security analysts gain instant visibility into whether a container issue stems from an application crash loop, node memory pressure, or an underlying physical network bottleneck.",
+      "Unlike standalone container monitors that view Kubernetes as an isolated virtual abstraction, JANUS bridges dynamic container telemetry directly with the underlying physical infrastructure. Every cluster node is mapped to its physical host and network location, giving platform engineers and security analysts the full picture — from container crash loop to physical hardware bottleneck — in a single view.",
     bullets: [
-      "Instant correlation linking container pods and namespaces to physical host nodes and NICs",
-      "Live IPAM integration mapping pod CIDRs and node IPs to top-of-rack switch ports",
-      "Distinguish between application code regressions, CNI limits, and physical switch port congestion",
-      "Elimination of virtual isolation blind spots through unified physical topology mapping",
+      "Every pod and namespace linked to its underlying physical host and network location",
+      "Distinguish between application failures, resource pressure, and physical network issues",
+      "Instant attribution from container anomaly to physical device and network port",
+      "Eliminate virtual isolation blind spots through unified physical topology awareness",
     ],
     metrics: {
       label: "NODE ATTRIBUTION TIME",
       value: "< 500ms",
-      sub: "From pod anomaly to physical switch port & IPAM binding",
+      sub: "From container anomaly to physical device and network identification",
     },
-    codeSnippet: `// Dynamic Container to Physical Fabric Binding
-[Pod Anomaly: payment-service-78df9b94-k98p | Namespace: prod-apps]
-  ↳ State Alert     : CrashLoopBackOff (Restart Count: 14)
-  ↳ Scheduled Node  : k8s-worker-04.internal (10.10.6.24)
-  ↳ Physical Host   : Dell PowerEdge R650 [Kernel 5.15.0-89]
-  ↳ Switch Binding  : TOR-SW-02:Gi1/0/8 [VLAN 20: K8S_FABRIC]
-  ↳ Root Cause Analysis: Node Memory Pressure (94.2% Physical RAM)
-  ✓ Physical Node Context Attributed [< 350ms Elapsed]`,
+    codeSnippet: `// Container to Physical Infrastructure Attribution
+[Pod Anomaly: payment-service | Namespace: prod-apps]
+  ↳ Alert:         CrashLoopBackOff (14 Restarts)
+  ↳ Scheduled On:  Production Worker Node 04
+  ↳ Physical Link: Top-of-Rack Switch — Port 8
+  ↳ Root Cause:    Node Memory Pressure (94.2% Utilized)
+  ✓ Physical Context Attributed [< 350ms Elapsed]`,
   },
   {
     id: "devsecops",
     title: "Fuel GitOps and DevSecOps within a single sovereign architecture",
     shortTitle: "GitOps & DevSecOps",
     description:
-      "Break down the silo between infrastructure reliability and security operations. Because JANUS unifies Kubernetes metrics with its native SIEM event pipeline and network flow analyzers, container crashes, anomalous ingress spikes, API server audit alerts, and unauthorized namespace modifications surface in the same operational console—accelerating root-cause analysis across infrastructure and application tiers.",
+      "Break down the silo between infrastructure reliability and security operations. Because JANUS unifies Kubernetes metrics with security event monitoring and network analysis, container anomalies, unauthorized privilege changes, and unexpected workload behavior surface in the same operational console — accelerating root-cause analysis across infrastructure and application tiers.",
     bullets: [
-      "Real-time parsing of Kubernetes API server audit logs for privilege escalation and RBAC drift",
-      "Unified correlation bridging SIEM security alerts directly with container restart cycles",
-      "Detection of rogue containers, unapproved registry pulls, and cluster-admin role grants",
-      "One-click actionability: alert operators, isolate network interfaces, or cordon degraded nodes",
+      "Real-time detection of unauthorized privilege escalation and permission drift",
+      "Unified correlation bridging security alerts directly with container and workload events",
+      "Detection of rogue containers, unauthorized image pulls, and privilege escalation attempts",
+      "One-click response: alert operators, isolate network access, or quarantine degraded nodes",
     ],
     metrics: {
-      label: "API AUDIT VELOCITY",
+      label: "DETECTION VELOCITY",
       value: "< 1.2s",
-      sub: "Real-time detection of unauthorized RBAC & cluster privilege drift",
+      sub: "Real-time detection of unauthorized privilege and cluster drift",
     },
-    codeSnippet: `// Unified DevSecOps & K8s API Server Audit Event
-[AUDIT ALERT: HIGH] K8s API Server Unauthorized RoleBinding
-  ↳ User Identity   : devops-automation-sa
-  ↳ Action          : create RoleBinding (cluster-admin)
-  ↳ Target Namespace: kube-system
-  ↳ SIEM Correlation: RULE-K8S-PRIVILEGE-ESCALATION Bound
-  ↳ Action Triggered:
-      1. Alert Dispatched to SOC Console with Origin Pod IP
-      2. Automated Policy Enforcement: RBAC Modification Reverted
-  ✓ Control Plane Integrity Preserved [< 1.1s Total Elapsed]`,
+    codeSnippet: `// Unified DevSecOps — Live Security Event
+[ALERT: HIGH] Unauthorized Privilege Escalation Detected
+  ↳ Identity:      Automation Service Account
+  ↳ Action:        Unauthorized administrator role claimed
+  ↳ Target:        System control namespace
+  ↳ Response:      [AUTOMATED ENFORCEMENT INITIATED]
+      1. Security team alerted with full event context
+      2. Unauthorized permission change reverted automatically
+  ✓ Control Plane Integrity Preserved [< 1.1s Elapsed]`,
   },
 ];
+
 
 const DEFENSE_PILLARS = [
   {
