@@ -98,40 +98,40 @@ const K8S_TABS: TabData[] = [
 
 const DEFENSE_PILLARS = [
   {
-    title: "Maintain sovereign workload metrics — completely air-gapped and on-premise",
+    title: "Keep 100% of your cluster metrics inside your network",
     description:
-      "Monitor production clusters and sensitive workloads without exposing internal service names, deployment manifests, or environment variables to external third-party SaaS vendors. JANUS ingests, aggregates, and visualizes all cluster metrics, node statuses, and Kubernetes API audit logs strictly within your private boundary, fulfilling strict air-gap compliance and operational data sovereignty requirements.",
-    highlight: "100% Air-Gapped Custody",
+      "Monitor production containers without streaming private service configs or secrets to external clouds. All cluster metrics and logs stay completely on-premise.",
+    highlight: "100% Private Metrics",
   },
   {
-    title: "Automate dynamic pod and node health tracking",
+    title: "Track pod and node health automatically in real time",
     description:
-      "Eliminate visibility blind spots caused by ephemeral microservices. Monitor CPU utilization, memory pressure, disk I/O, network throughput, and kubelet conditions (Ready, DiskPressure, MemoryPressure) across worker and control plane nodes, while catching stuck deployments, persistent CrashLoopBackOff cycles, failed scheduling attempts, and container OOM kills in real time.",
-    highlight: "Dynamic Health Tracking",
+      "Spot CPU spikes, memory shortages, and failing containers immediately. JANUS catches crash loops, stuck deployments, and out-of-memory errors the moment they happen.",
+    highlight: "Live Health Tracking",
   },
   {
-    title: "Ingest Kubernetes API server audit logs natively",
+    title: "Audit cluster changes and admin activity natively",
     description:
-      "Audit administrative and automated actions across your cluster control plane. JANUS parses Kubernetes audit logs to flag privilege escalations, cluster-admin role bindings, unauthorized secret access, and modifications to critical ingress controllers or security context constraints without requiring external analytical tooling.",
-    highlight: "Native API Server Auditing",
+      "Track every administrative action across your cluster. JANUS alerts you to unauthorized permission changes, secret access, and risky configurations without third-party tools.",
+    highlight: "Cluster Activity Audit",
   },
   {
-    title: "Harness unified workload history and capacity forecasting",
+    title: "Optimize container resources and prevent wasted spend",
     description:
-      "Eliminate tribal knowledge and guesswork in capacity planning. JANUS tracks resource requests versus actual consumption over time, surfacing over-provisioned namespaces, under-utilized worker nodes, and persistent pod restart loops to help engineering teams optimize compute allocation and right-size resource limits.",
-    highlight: "Capacity Forecasting",
+      "Compare requested resources against actual usage over time. Easily spot over-provisioned namespaces and right-size containers to improve performance and cut hardware costs.",
+    highlight: "Resource Optimization",
   },
   {
-    title: "Prioritize troubleshooting with integrated network and host correlation",
+    title: "Identify the root cause of service slowdowns quickly",
     description:
-      "Move beyond generic container error codes. When a microservice degrades, JANUS cross-references container logs, egress network flows, and node-level system events. Engineers immediately see whether downtime is caused by a failing upstream service dependency, an unapplied CNI policy, or saturated physical hardware.",
-    highlight: "Host & Network Correlation",
+      "Trace application issues across containers, network flows, and underlying servers. Your engineers quickly see whether downtime is caused by code, network latency, or hardware limits.",
+    highlight: "Fast Troubleshooting",
   },
   {
-    title: "Bridge cluster alerts directly to rapid infrastructure control",
+    title: "Isolate rogue containers before issues spread",
     description:
-      "Turn cluster metrics into immediate administrative action. When an unapproved workload is scheduled or a rogue container triggers volumetric traffic spikes, JANUS provides actionable attribution back to the host node and network interface, allowing teams to cordon nodes, alert operators, or isolate traffic at the network boundary before the blast radius spreads.",
-    highlight: "Rapid Cluster Control",
+      "Respond instantly when a workload behaves abnormally or generates rogue traffic. Operators can quarantine problem pods or cut off traffic at the network level right away.",
+    highlight: "Instant Workload Control",
   },
 ];
 
@@ -565,12 +565,18 @@ export default function KubernetesMonitoringPage() {
       <section id="architecture" className="w-full py-24 sm:py-32 px-6 sm:px-12 lg:px-16 border-t border-white/10 bg-[#14081c]/50">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className="max-w-3xl mb-16">
-            <h2 className="text-3xl sm:text-5xl font-normal tracking-tight text-white leading-tight">
-              Deterministic Kubernetes Observability Pillars
+          <div className="max-w-4xl mb-16">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-[1.15]">
+              Cluster Observability at Your Fingertips:{" "}
+              <span className="bg-gradient-to-r from-purple-200 via-purple-300 to-indigo-200 bg-clip-text text-transparent">
+                Monitor Pods, Nodes, and Workloads in Real Time
+              </span>
             </h2>
-            <p className="text-base sm:text-lg text-white/60 font-light mt-4 leading-relaxed">
-              Six core operational capabilities engineered for absolute telemetry custody, sub-second root-cause correlation, and rapid cluster control.
+            <h3 className="text-xl sm:text-2xl font-light text-purple-300 mt-5 leading-snug">
+              Complete Kubernetes visibility — 100% on-premise with zero cloud leaks
+            </h3>
+            <p className="text-base sm:text-lg text-white/75 font-light mt-4 leading-relaxed max-w-4xl">
+              Track cluster health and application performance without sending secrets or container logs to external clouds. JANUS monitors pods, nodes, and cluster events entirely within your private network.
             </p>
           </div>
 

@@ -98,40 +98,40 @@ const DLP_TABS: TabData[] = [
 
 const DEFENSE_PILLARS = [
   {
-    title: "Maintain absolute data custody — completely air-gapped and on-premise",
+    title: "Keep 100% of your data inspection inside your network",
     description:
-      "Classify and protect classified records, intellectual property, and regulated data assets without transmitting inspection dictionaries, regex rules, or file samples to vendor-managed cloud services. JANUS processes all scanning signatures, file hashing, behavioral checks, and violation logs strictly within your private boundary, satisfying the highest standards of national data sovereignty and air-gapped security compliance.",
-    highlight: "100% Air-Gapped Custody",
+      "Inspect sensitive files, policies, and violation logs without uploading them to external vendor clouds. Your proprietary information stays completely inside your private perimeter.",
+    highlight: "100% On-Premise",
   },
   {
-    title: "Inspect critical egress channels across endpoint and network vectors",
+    title: "Block unauthorized USB drives and network transfers",
     description:
-      "Prevent data leaks across both physical and digital exfiltration pathways: monitor and restrict unauthorized USB storage devices and external drives at the host kernel level; audit file movements over SMB/NFS, SSH/SCP, FTP, and internal HTTP/S; and intercept sensitive copy-paste actions, unapproved batch archiving, and print/spool operations.",
-    highlight: "Multi-Vector Channel Control",
+      "Stop data theft across physical and digital channels. JANUS restricts unapproved USB storage devices, blocks suspicious network uploads, and halts sensitive file copying.",
+    highlight: "Multi-Channel Protection",
   },
   {
-    title: "Classify sensitive information via deterministic pattern matching",
+    title: "Classify confidential documents automatically",
     description:
-      "Identify protected records rapidly using battle-tested pattern matching: structured data dictionaries with Luhn algorithms for financial/identity identifiers; cryptographic private key (.pem, .id_rsa) and API token signatures; and keyword document fingerprinting for classified markers and confidentiality tags.",
-    highlight: "Deterministic Classification",
+      "Instantly recognize financial records, customer identities, secret keys, and confidential markers. Accurate rule matching catches sensitive files before they can leave.",
+    highlight: "Automatic Classification",
   },
   {
-    title: "Harness unified entity history and incident reconstruction",
+    title: "Track complete chain of custody for every file",
     description:
-      "Trace the complete custody timeline of critical data. When a policy breach occurs, JANUS correlates the file access event with the responsible user account, launching process tree, destination IP, and switch port. Analysts can view the full chain of custody—from local file read to outbound transmission—in a single incident workbench.",
-    highlight: "Entity History & Timeline",
+      "See who accessed a sensitive document, which app opened it, and where it was sent. Your team gets a complete, easy-to-read timeline for every data movement.",
+    highlight: "Full Custody History",
   },
   {
-    title: "Prioritize insider risk with behavioral anomaly tracking",
+    title: "Spot insider threats and suspicious bulk downloads",
     description:
-      "Distinguish between normal business workflows and deliberate insider data harvesting. JANUS flags high-risk behavioral patterns, such as mass file renaming, abnormal after-hours volume transfers, localized batch compression of restricted repositories, and rapid staging of documents into hidden or temporary directories.",
-    highlight: "Insider Risk Tracking",
+      "Detect abnormal employee actions before damage is done. JANUS flags mass file renaming, after-hours downloads, and unauthorized archive creation immediately.",
+    highlight: "Insider Risk Alerts",
   },
   {
-    title: "Bridge data violations directly to hardware and host isolation",
+    title: "Stop data exfiltration with immediate port isolation",
     description:
-      "Move from passive auditing to active, deterministic prevention. When an unauthorized external exfiltration attempt is confirmed, JANUS triggers immediate remediation—blocking the transfer, disabling the unauthorized USB interface, revoking the user's active session, or dropping the physical switch port via integrated NAC to halt data theft before bytes reach untrusted hands.",
-    highlight: "Hardware-Level Isolation",
+      "When an unauthorized data leak is detected, JANUS stops it on the spot. It cancels the transfer, blocks the USB port, and cuts network access at the switch port in seconds.",
+    highlight: "Instant Containment",
   },
 ];
 
@@ -565,12 +565,18 @@ export default function DlpPage() {
       <section id="architecture" className="w-full py-24 sm:py-32 px-6 sm:px-12 lg:px-16 border-t border-white/10 bg-[#14081c]/50">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className="max-w-3xl mb-16">
-            <h2 className="text-3xl sm:text-5xl font-normal tracking-tight text-white leading-tight">
-              Deterministic Data Loss Prevention Pillars
+          <div className="max-w-4xl mb-16">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-[1.15]">
+              Data Loss Prevention at Your Fingertips:{" "}
+              <span className="bg-gradient-to-r from-purple-200 via-purple-300 to-indigo-200 bg-clip-text text-transparent">
+                Detect, Block, and Contain Data Leaks in Real Time
+              </span>
             </h2>
-            <p className="text-base sm:text-lg text-white/60 font-light mt-4 leading-relaxed">
-              Six core operational capabilities engineered for absolute data custody, multi-vector egress interception, and immediate hardware-level containment.
+            <h3 className="text-xl sm:text-2xl font-light text-purple-300 mt-5 leading-snug">
+              Protect sensitive company data — 100% on-premise with zero cloud leaks
+            </h3>
+            <p className="text-base sm:text-lg text-white/75 font-light mt-4 leading-relaxed max-w-4xl">
+              Stop unauthorized data sharing across USB drives, networks, and applications. JANUS inspects and protects your confidential files locally without uploading a single document or pattern to external clouds.
             </p>
           </div>
 

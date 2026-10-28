@@ -97,33 +97,33 @@ Result:          Device fully contained in 1.32s [Air-Gapped]`,
 
 const NAC_PILLARS = [
   {
-    title: "Enforce strict pre-admission standards via 802.1X and MAB",
+    title: "Verify every device before granting network access",
     description:
-      "Verify every incoming connection before issuing network transit. JANUS supports enterprise 802.1X EAP protocols for managed user devices while providing automated MAC Authentication Bypass (MAB) for headless systems, printers, cameras, and OT infrastructure, preventing unauthorized plug-ins on open wall jacks.",
-    highlight: "802.1X & MAB Standards",
+      "Check every laptop, phone, printer, and camera before it joins your network. Unapproved devices are stopped right at the wall jack before they can access internal data.",
+    highlight: "Pre-Admission Check",
   },
   {
-    title: "Detect rogue hardware and MAC spoofing instantly",
+    title: "Stop rogue devices and cloned identities instantly",
     description:
-      "Prevent perimeter bypass via forged network identities. By continuously reconciling live ARP tables, MAC-to-port bindings, and device profiles against authoritative IPAM baselines, JANUS detects duplicate MACs, port hopping, and unauthorized hardware insertions, blocking lateral network traversal before an intruder establishes a persistent foothold.",
-    highlight: "Rogue & Spoof Detection",
+      "Catch unauthorized hardware trying to impersonate legitimate devices. JANUS detects spoofed addresses and unknown plug-ins immediately, blocking them on the spot.",
+    highlight: "Instant Rogue Detection",
   },
   {
-    title: "Harness dynamic VLAN isolation and quarantine workflows",
+    title: "Quarantine infected devices without disrupting operations",
     description:
-      "Isolate non-compliant or compromised endpoints without taking downstream infrastructure offline. JANUS interacts directly with enterprise switch hardware to dynamically reassign ports into restricted guest or remediation VLANs, containing the blast radius of compromised machines while preserving analyst access for remote triage.",
-    highlight: "Dynamic Quarantine",
+      "Move compromised computers into an isolated quarantine zone with zero downtime for the rest of your office. Keep threats contained while technicians investigate safely.",
+    highlight: "Automated Quarantine",
   },
   {
-    title: "Bridge multi-vendor switch hardware with universal protocol standards",
+    title: "Works seamlessly across your existing switches",
     description:
-      "Eliminate single-vendor hardware lock-in. JANUS communicates with heterogeneous switch infrastructure across Cisco, Aruba, Juniper, and generic managed switches using universal standards—including RADIUS RFC 2865/3576 (CoA), standard SNMP write/traps, and SSH/CLI integration—protecting your existing capital hardware investments.",
-    highlight: "Multi-Vendor Universal",
+      "Protect your existing network investments without buying proprietary hardware. JANUS integrates easily with Cisco, Aruba, Juniper, and other standard switches.",
+    highlight: "Multi-Vendor Support",
   },
   {
-    title: "Execute direct, one-click port containment",
+    title: "Cut off threats with one-click port shutoff",
     description:
-      "Close the gap between threat detection and physical enforcement. Security operators can trigger immediate physical containment directly from an incident ticket—bouncing a port, disabling a switch interface, or blacklisting a MAC address across all managed access switches without requiring manual network engineering tickets.",
+      "Take action the moment a problem occurs. Security operators can disable an infected switch port or blacklist a suspicious device instantly from a single button.",
     highlight: "One-Click Containment",
   },
 ];
@@ -582,14 +582,14 @@ export default function NacProductPage() {
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-[1.15]">
               Access Control at Your Fingertips:{" "}
               <span className="bg-gradient-to-r from-purple-200 via-purple-300 to-indigo-200 bg-clip-text text-transparent">
-                Authenticate, Profile, and Enforce at Wire Speed
+                Authenticate, Verify, and Protect Every Port
               </span>
             </h2>
             <h3 className="text-xl sm:text-2xl font-light text-purple-300 mt-5 leading-snug">
-              Maintain sovereign admission policies — completely air-gapped and on-premise
+              Control network access for every device — 100% on-premise with zero cloud leaks
             </h3>
             <p className="text-base sm:text-lg text-white/75 font-light mt-4 leading-relaxed max-w-4xl">
-              Enforce role-based access control and security segmentation without transmitting employee credentials, internal MAC registries, or network topologies to third-party identity clouds. JANUS processes authentication requests, credential checks, and policy rules entirely within your private boundary, meeting strict air-gap compliance and zero-egress operational mandates.
+              Ensure only approved devices connect to your network. JANUS verifies every laptop, printer, and phone locally, preventing unauthorized access and data leaks without relying on external cloud identity services.
             </p>
           </div>
 

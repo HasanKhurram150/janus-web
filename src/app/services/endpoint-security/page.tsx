@@ -122,40 +122,40 @@ const ENDPOINT_TABS: TabData[] = [
 
 const DEFENSE_PILLARS = [
   {
-    title: "Maintain absolute endpoint telemetry custody — completely air-gapped and on-premise",
+    title: "Keep 100% of your endpoint data inside your network",
     description:
-      "Secure host assets across air-gapped enclaves and regulated environments without streaming sensitive process arguments, user command logs, or local configuration files to third-party multi-tenant clouds. JANUS enforces policies, parses host telemetry, and records historical events entirely within your private operational boundary.",
-    highlight: "100% Air-Gapped Custody",
+      "Protect your computers and servers without sending logs or files to external vendor clouds. All monitoring data stays safely inside your private network.",
+    highlight: "100% Private Data",
   },
   {
-    title: "Enforce deterministic, framework-aligned host detection",
+    title: "Spot attacks quickly using proven security rules",
     description:
-      "Correlate endpoint activities directly with the MITRE ATT&CK framework. Detect unauthorized command-line interpreters (e.g., suspicious PowerShell, Bash, or WMI execution), fileless persistence attempts, interactive remote administrative shells (SSH/RDP), and local privilege escalations without introducing compute-heavy background models.",
-    highlight: "MITRE ATT&CK Aligned",
+      "Detect suspicious commands, unauthorized scripts, and abnormal login attempts in real time. JANUS flags real malicious behavior without false alarms.",
+    highlight: "Proven Detection",
   },
   {
-    title: "Track system integrity and unauthorized configuration drift",
+    title: "Catch unauthorized system changes and security drift",
     description:
-      "Continuously audit critical system binaries, security configurations, and active network-listening sockets. JANUS alerts operators to rogue services, unapproved open ports, unauthorized local account creation, and drift from approved baseline security templates.",
-    highlight: "Integrity & Drift Audit",
+      "Continuously check critical system files, background services, and open network ports. JANUS alerts you immediately when settings change or unapproved apps appear.",
+    highlight: "System Integrity",
   },
   {
-    title: "Harness unified entity aggregation and complete attack timelines",
+    title: "View the complete attack story in a single timeline",
     description:
-      "Link host-level telemetry seamlessly with perimeter firewall drops, flow records, and syslog feeds. When an endpoint experiences a threat event, JANUS compiles the execution path, corresponding network connections, and data transfer volume into a single, cohesive timeline, eliminating the operational friction of stitching logs across multiple disconnected consoles.",
-    highlight: "Unified Attack Timeline",
+      "See how an incident started, which files were touched, and where it tried to connect. Your team gets a clear, connected timeline without piecing together separate logs.",
+    highlight: "Clear Attack Timeline",
   },
   {
-    title: "Prioritize rapid investigation with local artifact inspection",
+    title: "Inspect running processes and open ports instantly",
     description:
-      "Equip triage teams with instant visibility into running processes, active socket listeners, local user sessions, and service states. Analysts can quickly verify whether an alert represents benign administrative activity or an active breach without placing heavy analytical burdens on host endpoints.",
-    highlight: "Rapid Artifact Inspection",
+      "Give your team direct visibility into active apps, user logins, and open connections. Analysts can verify and resolve issues in seconds without slowing down user devices.",
+    highlight: "Fast Inspection",
   },
   {
-    title: "Execute direct, hardware-coordinated containment",
+    title: "Isolate compromised devices automatically at the switch",
     description:
-      "Eliminate response delays through converged containment mechanisms. When an endpoint is compromised, JANUS enables direct host-level containment while coordinating with native network controls to quarantine the host's physical switch port or revoke its network access via integrated NAC and firewall rules.",
-    highlight: "Hardware-Coordinated Containment",
+      "When a serious threat is confirmed, JANUS takes action instantly. It cuts off the device's network access at the physical switch port, stopping the attack from spreading.",
+    highlight: "Instant Containment",
   },
 ];
 
@@ -1668,12 +1668,18 @@ export default function EndpointSecurityPage() {
       <section id="architecture" className="w-full py-24 sm:py-32 px-6 sm:px-12 lg:px-16 border-t border-white/10 bg-[#14081c]/50">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className="max-w-3xl mb-16">
-            <h2 className="text-3xl sm:text-5xl font-normal tracking-tight text-white leading-tight">
-              Deterministic Host Defense Pillars
+          <div className="max-w-4xl mb-16">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-[1.15]">
+              Endpoint Defense at Your Fingertips:{" "}
+              <span className="bg-gradient-to-r from-purple-200 via-purple-300 to-indigo-200 bg-clip-text text-transparent">
+                Monitor, Protect, and Secure Every Device in Real Time
+              </span>
             </h2>
-            <p className="text-base sm:text-lg text-white/60 font-light mt-4 leading-relaxed">
-              Six core operational capabilities engineered for absolute telemetry custody, sub-second threat attribution, and hardware-coordinated response.
+            <h3 className="text-xl sm:text-2xl font-light text-purple-300 mt-5 leading-snug">
+              Protect your laptops and servers — 100% on-premise with zero cloud leaks
+            </h3>
+            <p className="text-base sm:text-lg text-white/75 font-light mt-4 leading-relaxed max-w-4xl">
+              Keep full control over your endpoint security data. JANUS monitors system activity, stops malicious attacks, and isolates compromised machines directly within your private network without sending any data to outside clouds.
             </p>
           </div>
 

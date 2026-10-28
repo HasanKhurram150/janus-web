@@ -97,40 +97,40 @@ const SLA_TABS: TabData[] = [
 
 const DEFENSE_PILLARS = [
   {
-    title: "Maintain sovereign compliance records — completely air-gapped and on-premise",
+    title: "Keep 100% of your SLA records strictly on-premise",
     description:
-      "Audit infrastructure availability, vendor commitments, and operational response times without sending internal uptime statistics, circuit details, or partner performance metrics to external clouds. JANUS stores, calculates, and exports all SLA records locally, satisfying rigorous compliance audits, internal governance, and sovereign air-gap mandates.",
-    highlight: "100% Air-Gapped Compliance",
+      "Track uptime, system availability, and partner contracts without exposing sensitive operational data to third-party clouds. All metrics remain private and audit-ready.",
+    highlight: "100% Private Records",
   },
   {
-    title: "Track multi-tier SLA commitments with objective telemetry",
+    title: "Measure uptime, latency, and packet loss accurately",
     description:
-      "Define and monitor granular operational thresholds tailored to specific business tiers: automatically measure continuous uptime percentages (e.g., 99.9% to 99.999%) across core routers and servers, track latency, jitter, and packet loss baselines across WAN circuits, and periodically validate essential network services (DNS, NTP, HTTPS, LDAP).",
-    highlight: "Multi-Tier Telemetry",
+      "Set clear availability targets for vital servers and network links. Automatically track uptime percentages, delay times, and core network services like DNS and HTTPS.",
+    highlight: "Real-Time Telemetry",
   },
   {
-    title: "Eliminate false-positive penalties with intelligent maintenance scheduling",
+    title: "Exclude planned maintenance to eliminate false penalties",
     description:
-      "Protect SLA scores from distortions during authorized change windows. JANUS allows operators to schedule planned maintenance windows that temporarily pause breach alarms and uptime deductions for designated nodes, ports, or subnets, preserving clean, audit-ready reporting.",
-    highlight: "Maintenance Window Intelligence",
+      "Protect your availability scores during scheduled upgrades. JANUS pauses breach warnings during approved maintenance windows, keeping reports clean and accurate.",
+    highlight: "Maintenance Filtering",
   },
   {
-    title: "Harness unified error budgeting and breach alerting",
+    title: "Receive early warnings before SLA agreements are breached",
     description:
-      "Prevent unexpected end-of-month SLA failures through continuous error budget tracking. JANUS calculates remaining allowable downtime across active measurement windows, issuing automated threshold warnings when sustained latency or intermittent packet loss threatens to exhaust SLA allowances.",
-    highlight: "Dynamic Error Budgeting",
+      "Avoid unexpected downtime penalties with continuous tracking. JANUS calculates remaining allowable downtime and warns your team before minor issues cause an SLA breach.",
+    highlight: "Proactive Warnings",
   },
   {
-    title: "Prioritize accountability with immutable audit trails and reporting",
+    title: "Generate clear audit reports for leadership and vendors",
     description:
-      "Generate verifiable uptime reports for internal leadership, compliance auditors, or third-party telecom providers. Historical performance curves, incident onset timestamps, and precise time-to-recovery (MTTR) metrics provide transparent documentation to challenge unfair third-party carrier SLAs or demonstrate compliance with regulatory standards.",
-    highlight: "Immutable Audit Trails & MTTR",
+      "Provide trusted uptime reports backed by precise timestamps and recovery times. Easily verify vendor service quality or prove contract compliance to leadership.",
+    highlight: "Audit-Ready Reports",
   },
   {
-    title: "Bridge performance degradation directly to operational remediation",
+    title: "Trace performance drops directly to the problem hardware",
     description:
-      "Turn performance dips into immediate tactical responses. When an SLA metric breaches defined risk margins, JANUS immediately points operators to the physical switch interface, IP address, and associated system alerts, allowing engineers to redirect traffic, isolate degraded routes, or engage vendors before end-users experience service interruption.",
-    highlight: "Hardware Root-Cause Link",
+      "Turn slowdown alerts into immediate action. JANUS links latency spikes and packet loss directly to the specific switch port or device, so engineers can fix issues fast.",
+    highlight: "Root-Cause Link",
   },
 ];
 
@@ -564,12 +564,18 @@ export default function SlaManagementPage() {
       <section id="architecture" className="w-full py-24 sm:py-32 px-6 sm:px-12 lg:px-16 border-t border-white/10 bg-[#14081c]/50">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className="max-w-3xl mb-16">
-            <h2 className="text-3xl sm:text-5xl font-normal tracking-tight text-white leading-tight">
-              Deterministic Service Assurance Pillars
+          <div className="max-w-4xl mb-16">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-[1.15]">
+              Service Assurance at Your Fingertips:{" "}
+              <span className="bg-gradient-to-r from-purple-200 via-purple-300 to-indigo-200 bg-clip-text text-transparent">
+                Track Uptime, Latency, and SLAs in Real Time
+              </span>
             </h2>
-            <p className="text-base sm:text-lg text-white/60 font-light mt-4 leading-relaxed">
-              Six core operational capabilities engineered for absolute SLA custody, empirical telemetry validation, and rapid infrastructure remediation.
+            <h3 className="text-xl sm:text-2xl font-light text-purple-300 mt-5 leading-snug">
+              Accurate, audit-ready uptime tracking — 100% on-premise with zero cloud leaks
+            </h3>
+            <p className="text-base sm:text-lg text-white/75 font-light mt-4 leading-relaxed max-w-4xl">
+              Monitor service reliability and vendor commitments without sending internal performance data outside your network. JANUS tracks uptime, measures latency, and generates clear audit reports completely on-premise.
             </p>
           </div>
 

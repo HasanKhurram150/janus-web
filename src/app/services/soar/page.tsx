@@ -104,39 +104,39 @@ Status:         Mitigated • Audit Ready`,
 
 const SOAR_PILLARS = [
   {
-    title: "Instant Threat Containment at the Wire",
+    title: "Isolate compromised devices in seconds",
     description:
-      "Stop attacks the millisecond they are detected. JANUS SOAR severs compromised hosts at the physical switch port, revokes network credentials, and blocks malicious traffic before an adversary can pivot or inflict damage.",
-    highlight: "Sub-Second Isolation",
-    badge: "HARDWARE SPEED",
+      "Stop attacks the moment they are detected. JANUS immediately cuts off the affected device at the physical switch port, blocking malicious activity before it can spread.",
+    highlight: "Fast Isolation",
+    badge: "INSTANT RESPONSE",
   },
   {
-    title: "Deterministic Playbook Automation",
+    title: "Automate response with proven playbooks",
     description:
-      "Eliminate analyst guesswork and operational drift. Every playbook executes predictable, battle-tested mitigation procedures with granular validation checks, ensuring reliable containment without unexpected side effects.",
-    highlight: "Repeatable & Proven",
-    badge: "PREDICTABLE DEFENSE",
+      "Remove manual guesswork from incident response. Step-by-step playbooks run tested mitigation actions automatically, ensuring fast and reliable defense every time.",
+    highlight: "Proven Steps",
+    badge: "AUTOMATED PLAYBOOKS",
   },
   {
-    title: "100% Air-Gapped Sovereign Orchestration",
+    title: "Run 100% locally with zero cloud dependencies",
     description:
-      "Orchestrate incident response in classified, industrial, and mission-critical environments. JANUS SOAR operates completely on-premise without external cloud APIs, third-party webhook relays, or telemetry leakage.",
-    highlight: "Zero Cloud Dependency",
+      "Protect sensitive, classified, and private environments. JANUS SOAR works entirely inside your network without external cloud connections or outside data leaks.",
+    highlight: "100% On-Premise",
     badge: "AIR-GAPPED READY",
   },
   {
-    title: "Human-in-the-Loop Dual Governance",
+    title: "Keep humans in control of critical decisions",
     description:
-      "Balance autonomous machine speed with human authority. Establish approval gates for sensitive operational technology, require dual-analyst sign-off for critical infrastructure, or trigger instant one-click rollbacks anytime.",
-    highlight: "Granular Control",
-    badge: "GOVERNED AUTONOMY",
+      "Balance automated speed with team oversight. Require analyst approval before touching vital servers, and use quick one-click rollbacks whenever needed.",
+    highlight: "Team Control",
+    badge: "HUMAN OVERSIGHT",
   },
   {
-    title: "Synchronized NOC and SOC Operations",
+    title: "Unite IT and security teams on one platform",
     description:
-      "Unify infrastructure engineering and security response into a shared operational canvas. Network engineers and security analysts work from the exact same incident state, cutting mean time to resolution by over 90%.",
-    highlight: "Unified Teamwork",
-    badge: "ZERO SILOS",
+      "Give network engineers and security analysts a single shared view of every incident. Teams resolve issues together faster without switching tools or miscommunicating.",
+    highlight: "Shared Visibility",
+    badge: "UNIFIED TEAMS",
   },
 ];
 
@@ -615,16 +615,16 @@ export default function SoarProductPage() {
           {/* Section Header */}
           <div className="max-w-4xl mb-16">
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-[1.15]">
-              Action at Wire Speed:{" "}
+              Action at Your Fingertips:{" "}
               <span className="bg-gradient-to-r from-orange-300 via-amber-200 to-rose-300 bg-clip-text text-transparent">
-                Automate, Neutralize, and Secure
+                Automate, Contain, and Resolve Threats in Seconds
               </span>
             </h2>
             <h3 className="text-xl sm:text-2xl font-light text-orange-300 mt-5 leading-snug">
-              Autonomous security orchestration built for air-gapped critical enclaves
+              Respond to security incidents automatically — 100% on-premise with zero cloud exposure
             </h3>
             <p className="text-base sm:text-lg text-white/75 font-light mt-4 leading-relaxed max-w-4xl">
-              Turn security telemetry directly into definitive containment actions. JANUS SOAR bridges the gap between detection and neutralization, allowing teams to execute complex multi-system incident playbooks in milliseconds without sending a single byte outside your private perimeter.
+              Turn security alerts directly into fast containment actions. JANUS SOAR isolates infected devices and executes response steps in seconds within your own private network, saving critical time without leaking data.
             </p>
           </div>
 

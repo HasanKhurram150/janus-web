@@ -71,8 +71,8 @@ export default function SiemDeepDive({ onClose }: SiemDeepDiveProps) {
       tag: "PRECISE DETECTION",
       title: "Detect threats with precision, not guesswork",
       description:
-        "JANUS identifies threats through deterministic, industry-standard detection logic — not opaque black-box models. Every alert is grounded in established attack patterns, giving analysts confident, actionable findings and eliminating the noise of unpredictable heuristic systems.",
-      bullets: ["Industry-standard detection logic", "Grounded in established attack frameworks", "No opaque black-box models"],
+        "JANUS spots threats using proven security rules rather than unpredictable AI guesses. Every alert is grounded in real attack patterns, giving your team confident findings without false alarms.",
+      bullets: ["Accurate rule-based detection", "Proven attack patterns", "Zero guesswork or false alarms"],
       icon: (
         <svg className="w-5 h-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -81,11 +81,11 @@ export default function SiemDeepDive({ onClose }: SiemDeepDiveProps) {
     },
     {
       id: "det-2",
-      tag: "L2/L3 TOPOLOGY MAPPING",
-      title: "Bridge detection engineering directly to physical infrastructure",
+      tag: "PHYSICAL LOCATION",
+      title: "Know the exact physical location of every threat",
       description:
-        "Track adversarial techniques (TTPs) across both network traffic and physical access boundaries. Correlate host activity with network topology to identify lateral movement, unapproved listening ports, or rogue hardware insertions before threats expand across subnets.",
-      bullets: ["Physical access boundaries", "Lateral movement detection", "Rogue hardware tracking"],
+        "Instead of just showing an IP address, JANUS identifies the exact device, network switch, and port involved. Your team can pinpoint and fix issues right where they happen in your building.",
+      bullets: ["Exact switch & port location", "Fast on-site physical tracking", "Stops threats before they spread"],
       icon: (
         <svg className="w-5 h-5 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
@@ -94,11 +94,11 @@ export default function SiemDeepDive({ onClose }: SiemDeepDiveProps) {
     },
     {
       id: "det-3",
-      tag: "ENTITY PROFILING // ZERO FATIGUE",
-      title: "Harness unified entity aggregation and rapid triage",
+      tag: "ZERO ALERT FATIGUE",
+      title: "Eliminate alert overload with unified context",
       description:
-        "Automatically consolidate related operational anomalies, flow spikes, and security events around specific network entities. An analyst can review a consolidated incident profile—linking the timeline of events, bidirectional traffic volume, and endpoint process triggers—in a single view to eliminate alert fatigue.",
-      bullets: ["Consolidated incident profile", "Bidirectional flow spikes", "Process triggers correlation"],
+        "Related warnings are automatically grouped around the affected device. Analysts see the full history, user activity, and network status in one view, saving hours of manual investigation.",
+      bullets: ["All related alerts grouped together", "Complete device & user history", "Saves hours of manual investigation"],
       icon: (
         <svg className="w-5 h-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
@@ -107,11 +107,11 @@ export default function SiemDeepDive({ onClose }: SiemDeepDiveProps) {
     },
     {
       id: "det-4",
-      tag: "ROOT-CAUSE ATTRIBUTION",
-      title: "Prioritize focus with root-cause attribution",
+      tag: "ROOT CAUSE",
+      title: "Understand the root cause immediately",
       description:
-        "Instead of overwhelming analysts with hundreds of disconnected interface or authentication alerts, JANUS ties multi-source events back to the responsible IP and switch interface. Teams immediately identify whether an alert stems from an operational misconfiguration, an internal exfiltration attempt, or an external exploit.",
-      bullets: ["Root-cause IP & Port trace", "Misconfig vs exploit filter", "Drastic fatigue reduction"],
+        "JANUS traces incidents back to their source in seconds. Your team quickly knows whether an alert is a simple misconfiguration, an insider risk, or an outside attack, so they can prioritize fast.",
+      bullets: ["Instant source identification", "Separates mistakes from real attacks", "Fast priority decisions"],
       icon: (
         <svg className="w-5 h-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -123,8 +123,8 @@ export default function SiemDeepDive({ onClose }: SiemDeepDiveProps) {
       tag: "INSTANT RESPONSE",
       title: "Contain threats directly, without delay",
       description:
-        "Response is built into the platform. Once a threat is confirmed, containment actions execute immediately at the infrastructure level — isolating the affected device, cutting off network access, and notifying the response team. No manual steps, no tool switching, no wasted time.",
-      bullets: ["One-click threat containment", "Hardware-level device isolation", "Automated team notification"],
+        "When a threat is confirmed, JANUS takes action right away. It isolates the compromised device and blocks network access at the switch port in seconds, stopping damage before it spreads.",
+      bullets: ["One-click device isolation", "Hardware-level port shutoff", "Instant response team alerts"],
       icon: (
         <svg className="w-5 h-5 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -395,13 +395,13 @@ export default function SiemDeepDive({ onClose }: SiemDeepDiveProps) {
       <div className="pt-8 border-t border-white/10">
         <div className="max-w-4xl mb-12">
           <h3 className="text-2xl sm:text-4xl font-normal tracking-tight text-white leading-tight mb-3">
-            Analytics at Your Fingertips: Monitor, Detect, and Investigate Threats at Wire Speed
+            Analytics at Your Fingertips: Monitor, Detect, and Investigate Threats in Real Time
           </h3>
           <p className="text-sm sm:text-base font-mono text-purple-300 mb-4">
-            Gain rapid insights from your data — completely air-gapped and on-premise
+            Gain fast insights from your security data — 100% on-premise with zero cloud leaks
           </p>
           <p className="text-sm sm:text-base text-white/70 leading-relaxed font-light">
-            Unify data management for security practitioners to provide centralized internal data visibility, access, and analysis without sending a single byte outside your perimeter. Control the flow of security telemetry to satisfy strict regulatory standards, defense-grade compliance, and air-gapped operational requirements without performance compromises or cloud egress costs.
+            JANUS gives your security team total visibility across all internal network activity. Keep all your security data strictly within your own network to meet high compliance standards, without paying cloud fees or risking data exposure.
           </p>
         </div>
 

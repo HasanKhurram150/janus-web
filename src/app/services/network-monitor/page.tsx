@@ -96,40 +96,40 @@ const NETWORK_TABS: TabData[] = [
 
 const DEFENSE_PILLARS = [
   {
-    title: "Maintain sovereign operational telemetry — completely air-gapped and on-premise",
+    title: "Keep 100% of your network telemetry inside your network",
     description:
-      "Monitor mission-critical backbone and edge networks without exposing internal device IPs, routing schemas, or interface utilization statistics to multi-tenant cloud platforms. JANUS collects, stores, and graphs all polling metrics and state histories strictly within your local environment, meeting strict air-gap compliance and national data sovereignty mandates.",
-    highlight: "100% Air-Gapped Telemetry",
+      "Monitor core routers, switches, and firewalls without sending device IPs or traffic stats to outside clouds. All network records stay strictly on-premise.",
+    highlight: "100% On-Premise",
   },
   {
-    title: "Track multi-vendor infrastructure via universal standards",
+    title: "Monitor any brand of network equipment with open standards",
     description:
-      "Eliminate proprietary vendor lock-in. JANUS monitors multi-vendor environments—including Cisco, Juniper, Aruba, Fortinet, and generic enterprise managed switches—using standard protocols: hardened SNMP (v1, v2c, and v3 AES-256) for interface throughput, packet discards, CRC errors, CPU load, and chassis temperature; and proactive ICMP/TCP synthetics for instant outage detection.",
-    highlight: "Universal Multi-Vendor Standards",
+      "Avoid proprietary lock-in. JANUS tracks hardware from Cisco, Juniper, Aruba, Fortinet, and other enterprise vendors using standard SNMP and ping checks.",
+    highlight: "Multi-Vendor Support",
   },
   {
-    title: "Detect network anomalies, broadcast storms, and interface flapping",
+    title: "Catch bad cables, errors, and port flapping early",
     description:
-      "Guard against silent network degradation and operational bottlenecks. JANUS continuously monitors interface error baselines, instantly alerting operators to duplex mismatches, bad cabling (FCS/CRC errors), rapid port flapping, and packet drop spikes before end-users experience application degradation.",
-    highlight: "Deterministic Anomaly Tracking",
+      "Stop network slowdowns before users complain. JANUS spots packet errors, faulty cables, and unstable ports instantly so your team can fix hardware quickly.",
+    highlight: "Fast Error Detection",
   },
   {
-    title: "Harness unified traffic flow and bandwidth analysis",
+    title: "See which users and apps consume the most bandwidth",
     description:
-      "Move beyond basic link utilization percentages. By pairing SNMP interface counters with native flow monitoring (NetFlow/sFlow), JANUS identifies the exact 'top talkers,' protocols, and conversations consuming interface bandwidth, allowing engineers to determine whether a saturated link is driven by routine backups, video streaming, or anomalous lateral transfers.",
-    highlight: "NetFlow & Top-Talker Analytics",
+      "Identify top talkers and protocols in real time. Easily see whether high bandwidth usage is caused by routine backups, media streaming, or unusual data transfers.",
+    highlight: "Traffic Breakdown",
   },
   {
-    title: "Prioritize capacity planning with historical link utilization metrics",
+    title: "Plan network upgrades with clear long-term trends",
     description:
-      "Eliminate guesswork in bandwidth provisioning. JANUS tracks long-term traffic trends and peak usage curves across physical trunks and WAN links, giving network planners the empirical data needed to schedule link upgrades, balance VLAN trunk loads, and optimize route topologies.",
-    highlight: "Capacity Planning & Trends",
+      "Remove guesswork from capacity planning. Review historical bandwidth trends and peak usage times to know exactly when to upgrade links or balance network traffic.",
+    highlight: "Capacity Planning",
   },
   {
-    title: "Bridge network alerts directly to rapid operational containment",
+    title: "Fix network problems with direct switch port control",
     description:
-      "Turn network fault detection into immediate intervention. When an interface experiences runaway packet loops, rogue traffic generation, or unapproved device connections, JANUS links the event directly to physical port controls. Operators can disable the switch port, reassign the VLAN, or initiate upstream firewall rules directly from the unified console without switching management tools.",
-    highlight: "Direct Hardware Containment",
+      "Take action right away when an interface misbehaves. Operators can shut down problem ports or change VLANs with one click without leaving the console.",
+    highlight: "Direct Port Control",
   },
 ];
 
@@ -563,12 +563,18 @@ export default function NetworkMonitorPage() {
       <section id="architecture" className="w-full py-24 sm:py-32 px-6 sm:px-12 lg:px-16 border-t border-white/10 bg-[#14081c]/50">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className="max-w-3xl mb-16">
-            <h2 className="text-3xl sm:text-5xl font-normal tracking-tight text-white leading-tight">
-              Deterministic Fabric Telemetry Pillars
+          <div className="max-w-4xl mb-16">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-[1.15]">
+              Network Visibility at Your Fingertips:{" "}
+              <span className="bg-gradient-to-r from-purple-200 via-purple-300 to-indigo-200 bg-clip-text text-transparent">
+                Monitor Bandwidth, Ports, and Traffic in Real Time
+              </span>
             </h2>
-            <p className="text-base sm:text-lg text-white/60 font-light mt-4 leading-relaxed">
-              Six core operational capabilities engineered for absolute telemetry custody, multi-vendor standards, and rapid hardware-layer containment.
+            <h3 className="text-xl sm:text-2xl font-light text-purple-300 mt-5 leading-snug">
+              Real-time network performance monitoring — 100% on-premise with zero cloud leaks
+            </h3>
+            <p className="text-base sm:text-lg text-white/75 font-light mt-4 leading-relaxed max-w-4xl">
+              Keep watch over routers, switches, and network traffic without sending internal topology data to third-party clouds. JANUS tracks interface speeds, catches bad cables, and pinpoints top bandwidth users directly on-premise.
             </p>
           </div>
 

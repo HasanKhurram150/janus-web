@@ -103,36 +103,36 @@ const DETECTION_PILLARS = [
   {
     title: "Detect threats with precision, not guesswork",
     description:
-      "JANUS identifies threats through deterministic, industry-standard detection logic — not opaque black-box models. Every alert is grounded in established attack patterns, giving analysts confident, actionable findings and eliminating the noise of unpredictable heuristic systems.",
-    highlight: "Industry-Standard Detection",
+      "JANUS spots threats using proven security rules rather than unpredictable AI guesses. Every alert is grounded in real attack patterns, giving your team confident findings without false alarms.",
+    highlight: "Accurate Detection",
     badge: "PRECISE DETECTION",
   },
   {
-    title: "Know exactly where every threat is, physically",
+    title: "Know the exact physical location of every threat",
     description:
-      "JANUS doesn't just show you an IP address — it tells you exactly which physical device, network segment, and location is involved. Security teams can pinpoint threats within their real infrastructure and act with complete situational awareness instead of hunting through disconnected records.",
-    highlight: "Full Physical Attribution",
+      "Instead of just showing an IP address, JANUS identifies the exact device, network switch, and port involved. Your team can pinpoint and fix issues right where they happen in your building.",
+    highlight: "Physical Location",
     badge: "PHYSICAL AWARENESS",
   },
   {
-    title: "Eliminate alert fatigue with unified event context",
+    title: "Eliminate alert overload with unified context",
     description:
-      "Related events, anomalies, and network activity are automatically consolidated around the assets they affect. Analysts see a complete, unified incident profile — linking event history, network activity, and device context in a single view — so every investigation starts with answers, not questions.",
-    highlight: "Unified Incident View",
+      "Related warnings are automatically grouped around the affected device. Analysts see the full history, user activity, and network status in one view, saving hours of manual investigation.",
+    highlight: "Connected History",
     badge: "ZERO ALERT FATIGUE",
   },
   {
     title: "Understand the root cause immediately",
     description:
-      "Instead of sifting through hundreds of disconnected alerts, JANUS connects all related signals back to the responsible asset and incident origin. Teams instantly know whether they are dealing with a misconfiguration, an insider threat, or an active external attack — and can prioritize accordingly.",
-    highlight: "Root-Cause Attribution",
-    badge: "INSTANT CLARITY",
+      "JANUS traces incidents back to their source in seconds. Your team quickly knows whether an alert is a simple misconfiguration, an insider risk, or an outside attack, so they can prioritize fast.",
+    highlight: "Instant Clarity",
+    badge: "ROOT CAUSE",
   },
   {
     title: "Contain threats directly, without delay",
     description:
-      "Response is built into the platform. Once a threat is confirmed, containment actions execute immediately at the infrastructure level — isolating the affected device, cutting off network access, and notifying the response team. No manual steps, no tool switching, no wasted time.",
-    highlight: "Sub-2.5s Containment",
+      "When a threat is confirmed, JANUS takes action right away. It isolates the compromised device and blocks network access at the switch port in seconds, stopping damage before it spreads.",
+    highlight: "Fast Containment",
     badge: "INSTANT RESPONSE",
   },
 ];
@@ -699,17 +699,14 @@ export default function SiemProductPage() {
               <h2 className="text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-[1.15]">
                 Analytics at Your Fingertips:{" "}
                 <span className="bg-gradient-to-r from-purple-200 via-purple-300 to-indigo-200 bg-clip-text text-transparent">
-                  Monitor, Detect, and Investigate Threats at Wire Speed
+                  Monitor, Detect, and Investigate Threats in Real Time
                 </span>
               </h2>
               <h3 className="text-xl sm:text-2xl font-light text-purple-300 mt-5 leading-snug">
-                Gain rapid insights from your data — completely air-gapped and on-premise
+                Gain fast insights from your security data — 100% on-premise with zero cloud leaks
               </h3>
               <p className="text-base sm:text-lg text-white/75 font-light mt-4 leading-relaxed max-w-4xl">
-                Unify data management for security practitioners to provide centralized internal data visibility, access,
-                and analysis without sending a single byte outside your perimeter. Control the flow of security
-                telemetry to satisfy strict regulatory standards, defense-grade compliance, and air-gapped operational
-                requirements without performance compromises or cloud egress costs.
+                JANUS gives your security team total visibility across all internal network activity. Keep all your security data strictly within your own network to meet high compliance standards, without paying cloud fees or risking data exposure.
               </p>
             </div>
 

@@ -96,34 +96,34 @@ Result:          Device isolated in 1.48s — Zero further exposure`,
 
 const TOPOLOGY_PILLARS = [
   {
-    title: "Use automated discovery to eliminate stale reservations",
+    title: "Find active devices automatically and eliminate dead records",
     description:
-      "Replace manual record-keeping with continuous, scheduled network discovery. JANUS sweeps designated CIDR blocks to detect active nodes, mark responsive addresses, and flag abandoned reservations, ensuring your subnet utilization metrics reflect true network state rather than outdated records.",
-    highlight: "Automated CIDR Sweeps",
+      "Replace manual spreadsheets with automatic network scans. JANUS checks subnets regularly to show which IP addresses are active and frees up abandoned reservations automatically.",
+    highlight: "Automated IP Scans",
   },
   {
     title: "Detect rogue hardware and IP conflicts immediately",
     description:
-      "Guard against addressing discrepancies and unauthorized hardware additions. JANUS tracks MAC-to-IP relationships over time, instantly alerting operators to duplicate IP assignments, MAC address changes on static infrastructure, and unknown devices claiming addresses outside authorized pools.",
-    highlight: "Rogue & Conflict Detection",
+      "Stop network disruptions before they cause downtime. JANUS spots duplicate IPs, unauthorized hardware, and sudden device changes right away.",
+    highlight: "Conflict Detection",
   },
   {
-    title: "Harness unified entity history and change auditing",
+    title: "Keep a complete history of every IP and device",
     description:
-      "Track the complete operational lifecycle of every network address. JANUS logs historical bindings across IP changes, MAC transitions, and switch port migrations, giving engineers an auditable timeline to simplify network troubleshooting, capacity planning, and post-incident forensics.",
-    highlight: "Historical Audit Trail",
+      "View the full timeline of any network address over time. Easily trace past IP changes, device replacements, and switch port moves for fast troubleshooting and audits.",
+    highlight: "Complete Audit Trail",
   },
   {
-    title: "Prioritize capacity planning with real-time subnet metrics",
+    title: "Prevent IP exhaustion before your network runs out",
     description:
-      "Monitor address pool depletion before outages occur. JANUS provides clear, real-time visualization of subnet saturation, available address buffers, and prefix distribution, enabling network teams to plan route allocations and expand infrastructure based on live network measurements.",
-    highlight: "Saturation Analytics",
+      "Monitor subnet usage with clear visual charts. See which subnets are filling up and plan new IP allocations well in advance of any shortages.",
+    highlight: "Subnet Capacity Alerts",
   },
   {
-    title: "Bridge IP inventory directly to rapid network control",
+    title: "Isolate rogue devices directly at the switch port",
     description:
-      "Turn address visibility into instant operational intervention. Because JANUS links IP records directly to physical switch ports, network operators can pinpoint the exact physical location of a misbehaving or rogue host and initiate port-level remediation right at the hardware layer.",
-    highlight: "Hardware-Layer Control",
+      "Turn IP tracking into immediate hardware protection. JANUS connects every IP to its exact physical switch port, letting you disconnect unauthorized devices with one click.",
+    highlight: "Switch Port Control",
   },
 ];
 
@@ -597,16 +597,16 @@ export default function IpamProductPage() {
             {/* Section Header */}
             <div className="max-w-4xl mb-16">
               <h2 className="text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-[1.15]">
-                Infrastructure Topology at Your Fingertips:{" "}
+                Subnet &amp; IP Management at Your Fingertips:{" "}
                 <span className="bg-gradient-to-r from-purple-200 via-purple-300 to-indigo-200 bg-clip-text text-transparent">
-                  Discover, Track, and Reconcile Subnets at Wire Speed
+                  Discover, Track, and Control Every IP in Real Time
                 </span>
               </h2>
               <h3 className="text-xl sm:text-2xl font-light text-purple-300 mt-5 leading-snug">
-                Maintain authoritative subnet visibility — completely air-gapped and on-premise
+                Gain complete visibility over your subnets and devices — 100% on-premise with zero cloud leaks
               </h3>
               <p className="text-base sm:text-lg text-white/75 font-light mt-4 leading-relaxed max-w-4xl">
-                Control your core network schema without transmitting internal topology, VLAN layouts, or host inventories to external cloud providers. JANUS runs all subnet calculations, periodic discovery scans, and historical retention entirely within your private boundary, satisfying strict air-gapped and data-sovereignty requirements for defense, utilities, and high-security enterprise enclaves.
+                Track every IP address and connected device across your internal network. JANUS runs all subnet scans and inventory tracking entirely inside your perimeter, ensuring defense-grade privacy without cloud fees.
               </p>
             </div>
 
